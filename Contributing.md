@@ -2,7 +2,9 @@
 
 Bug fixes, examples, and contributions are welcome!
 
-Please make all pull requests to the `dev` branch. 
+Please get in touch (yotammann@gmail.com) and tell me what features you'd like to see or contribute to. 
+
+And make all pull requests to the `dev` branch. 
 
 ## Examples
 
