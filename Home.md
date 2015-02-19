@@ -16,7 +16,7 @@ Tone.Time is a feature which lets you think in terms of musical timing instead o
 
 Signals plays an important role in the library. Understanding [Tone.Signal](Signals) will help you create tightly synchronized and interestingly automated applications. 
 
-### [Contributing](Contributing)
+## [Contributing](Contributing)
 
 The easiest way to contribute is by sending issues on Github. If you already have a good understanding of Tone.js, making tutorials which I can link to from the github page would be very welcome. 
 
