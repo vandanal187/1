@@ -15,7 +15,12 @@ oscillator.frequency.value = 100; //sets the value immediately
 
 ## Units
 
-Tone.Signal
+The unit type of a signal can be set to make setting and getting values more understandable and intuitive.
+
+* `"number"` - the default unit. 
+* `"db"` - the set value will be converted from decibels to gain.
+* `"time"` - the set value is converted from Tone.Time into seconds. 
+* `"frequency"` - the set value is converted from Tone.Frequency into a number. 
 
 ## Scheduling values
 
