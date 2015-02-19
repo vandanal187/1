@@ -7,6 +7,7 @@ There are a few ways to download and install Tone.js.
 * Github - [full](https://raw.githubusercontent.com/TONEnoTONE/Tone.js/master/build/Tone.js) | [min](https://raw.githubusercontent.com/TONEnoTONE/Tone.js/master/build/Tone.min.js)
 * [Bower](http://bower.io/) - bower install tone
 * [npm](https://www.npmjs.org/) - npm install tone
+* [cdn](http://cdn.tonejs.org/latest/Tone.min.js) - CDN (not for production use, please)
 
 ## Using
 
@@ -18,6 +19,12 @@ Tone.js can be used like any other script or library by dropping the into the <h
 
 ```html
 <script type="text/javascript" src="path/to/Tone.js"></script>
+```
+
+or from the Tone's CDN
+
+```html
+<script type="text/javascript" src="http://cdn.tonejs.org/latest/Tone.min.js"></script>
 ```
 
 To use any of the instrument and effect presets, be sure to grab the [Tone.Presets build](https://raw.githubusercontent.com/TONEnoTONE/Tone.js/master/build/Tone.Preset.js) which is not included in the default build. 
