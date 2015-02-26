@@ -6,7 +6,7 @@ There are a few ways to install and use Tone.js using either `npm` or `bower` or
 
 ## Working with Tone.js
 
-To get started sequencing and synthesizing notes, take a look at a basic [arpeggiator walkthrough](Arpeggiator). Once you've completed that, you can [add a basic effect](ArpeggiatorEffect) to your arpeggiator. 
+To get started sequencing and synthesizing notes, take a look at a basic [arpeggiator walkthrough](Arpeggiator). Once you've completed that, you can [add a basic effect](Arpeggiator Effect) to your arpeggiator. 
 
 ### Time
 
