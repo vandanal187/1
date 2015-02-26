@@ -44,3 +44,9 @@ Additionally, Tone provides methods for ramping and scheduling values at the cur
 ## Implementation
 
 Tone.Signal is implemented in a very simple way. Each instance is just a GainNode connected to a constant signal generator. The generator always outputs 1, and the GainNode sets the output value by adjusting its gain. Every Signal is just a single GainNode and the constant generator is shared among all instances making it very efficient. It has the benefit of easily inheriting all of `AudioParam`'s scheduling methods. 
+
+## Operators
+
+There are dozens of operators on signals to perform [math](SignalMath), [logic](SignalLogic), and [routing](SignalRouting). 
+
+There is also an operator aggregator called [Tone.Expr](Expr) which makes it easier to write complex signal expressions. 
