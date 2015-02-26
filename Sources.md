@@ -1,11 +1,11 @@
 Tone.js has a number of built in audio sources:
 
-* [Tone.Oscillator](http://tonenotone.github.io/Tone.js/doc/Tone.Oscillator.html)
-* [Tone.PulseOscillator](http://tonenotone.github.io/Tone.js/doc/Tone.PulseOscillator.html)
-* [Tone.PWMOscillator](http://tonenotone.github.io/Tone.js/doc/Tone.PWMOscillator.html)
-* [Tone.OmniOscillator](http://tonenotone.github.io/Tone.js/doc/Tone.OmniOscillator.html)
-* [Tone.Player](http://tonenotone.github.io/Tone.js/doc/Tone.Player.html)
-* [Tone.Noise](http://tonenotone.github.io/Tone.js/doc/Tone.Noise.html)
+* [Tone.Oscillator](http://tonejs.org/docs/Tone.Oscillator.html)
+* [Tone.PulseOscillator](http://tonejs.org/docs/Tone.PulseOscillator.html)
+* [Tone.PWMOscillator](http://tonejs.org/docs/Tone.PWMOscillator.html)
+* [Tone.OmniOscillator](http://tonejs.org/docs/Tone.OmniOscillator.html)
+* [Tone.Player](http://tonejs.org/docs/Tone.Player.html)
+* [Tone.Noise](http://tonejs.org/docs/Tone.Noise.html)
 
 #### Tone.Oscillator
 

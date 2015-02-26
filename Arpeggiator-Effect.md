@@ -4,7 +4,7 @@ In the [previous example](Arpeggiator) we created an arpeggiating synthesizer. N
 
 ### The Filter
 
-To create our effect we'll first create a [Tone.Filter](http://tonenotone.github.io/Tone.js/doc/Tone.Master.html) and then route the synth signal through the filter. In the previous example, we connected the synth to the master output, but in this example, we are going to connect the synth to the filter and the filter to the master output. 
+To create our effect we'll first create a [Tone.Filter](http://tonejs.org/docs/Tone.Master.html) and then route the synth signal through the filter. In the previous example, we connected the synth to the master output, but in this example, we are going to connect the synth to the filter and the filter to the master output. 
 
 ```javascript
 var synth = new Tone.MonoSynth();

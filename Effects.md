@@ -1,18 +1,18 @@
 Tone.js also has a few stereo and mono effects some of which also have their own presets. 
 
-* [Tone.AutoPanner](http://tonenotone.github.io/Tone.js/doc/Tone.AutoPanner.html)
-* [Tone.AutoWah](http://tonenotone.github.io/Tone.js/doc/Tone.AutoWah.html)
-* [Tone.BitCrusher](http://tonenotone.github.io/Tone.js/doc/Tone.BitCrusher.html)
-* [Tone.Chebyshev](http://tonenotone.github.io/Tone.js/doc/Tone.Chebyshev.html)
-* [Tone.Chorus](http://tonenotone.github.io/Tone.js/doc/Tone.Chorus.html)
-* [Tone.Convolver](http://tonenotone.github.io/Tone.js/doc/Tone.Convolver.html)
-* [Tone.Distortion](http://tonenotone.github.io/Tone.js/doc/Tone.Distortion.html)
-* [Tone.FeedbackDelay](http://tonenotone.github.io/Tone.js/doc/Tone.FeedbackDelay.html)
-* [Tone.Freeverb](http://tonenotone.github.io/Tone.js/doc/Tone.Freeverb.html)
-* [Tone.JCReverb](http://tonenotone.github.io/Tone.js/doc/Tone.JCReverb.html)
-* [Tone.Phaser](http://tonenotone.github.io/Tone.js/doc/Tone.Phaser.html)
-* [Tone.PingPongDelay](http://tonenotone.github.io/Tone.js/doc/Tone.PingPongDelay.html)
-* [Tone.StereoWidener](http://tonenotone.github.io/Tone.js/doc/Tone.StereoWidener.html)
+* [Tone.AutoPanner](http://tonejs.org/docs/Tone.AutoPanner.html)
+* [Tone.AutoWah](http://tonejs.org/docs/Tone.AutoWah.html)
+* [Tone.BitCrusher](http://tonejs.org/docs/Tone.BitCrusher.html)
+* [Tone.Chebyshev](http://tonejs.org/docs/Tone.Chebyshev.html)
+* [Tone.Chorus](http://tonejs.org/docs/Tone.Chorus.html)
+* [Tone.Convolver](http://tonejs.org/docs/Tone.Convolver.html)
+* [Tone.Distortion](http://tonejs.org/docs/Tone.Distortion.html)
+* [Tone.FeedbackDelay](http://tonejs.org/docs/Tone.FeedbackDelay.html)
+* [Tone.Freeverb](http://tonejs.org/docs/Tone.Freeverb.html)
+* [Tone.JCReverb](http://tonejs.org/docs/Tone.JCReverb.html)
+* [Tone.Phaser](http://tonejs.org/docs/Tone.Phaser.html)
+* [Tone.PingPongDelay](http://tonejs.org/docs/Tone.PingPongDelay.html)
+* [Tone.StereoWidener](http://tonejs.org/docs/Tone.StereoWidener.html)
 
 ### dry/wet
 

@@ -4,13 +4,13 @@ In this example, we'll create an arpeggiator which plays the next note in a seri
 
 ### The Synthesizer
 
-Tone.js has a number of instrument, each with nearly the same interface for triggering attacks and releases. Here we'll use [Tone.MonoSynth](http://tonenotone.github.io/Tone.js/doc/Tone.MonoSynth.html), but you can easily swap the MonoSynth for a [DuoSynth](http://tonenotone.github.io/Tone.js/doc/Tone.DuoSynth.html), [FMSynth](http://tonenotone.github.io/Tone.js/doc/Tone.FMSynth.html), or [AMSynth](http://tonenotone.github.io/Tone.js/doc/Tone.AMSynth.html) without changing any of the rest of the code. 
+Tone.js has a number of instrument, each with nearly the same interface for triggering attacks and releases. Here we'll use [Tone.MonoSynth](http://tonejs.org/docs/Tone.MonoSynth.html), but you can easily swap the MonoSynth for a [DuoSynth](http://tonejs.org/docs/Tone.DuoSynth.html), [FMSynth](http://tonejs.org/docs/Tone.FMSynth.html), or [AMSynth](http://tonejs.org/docs/Tone.AMSynth.html) without changing any of the rest of the code. 
 
 ```javascript
 var synth = new Tone.MonoSynth();
 ```
 
-We'll also connect our synth to the [master output](http://tonenotone.github.io/Tone.js/doc/Tone.Master.html) so that we can hear it. 
+We'll also connect our synth to the [master output](http://tonejs.org/docs/Tone.Master.html) so that we can hear it. 
 
 ```javascript
 synth.toMaster();
@@ -50,7 +50,7 @@ setInterval(function(){
 
 ### Timing the Notes
 
-One way to make the arpeggiator loop is with `setInterval` as shown above. The problem is that the timing would be kinda loose since native Javascript timing is not very accurate or reliable. Instead we'll use `Tone.Transport.setInterval` which is defined in [Tone.Transport](http://tonenotone.github.io/Tone.js/doc/Tone.Transport.html). Tone's `setInterval` method looks very similar to Javascript's `setInterval`, except that Tone's method passes in the exact time when the event was scheduled to occur (and also takes its interval time in seconds instead of milliseconds). We'll use that `time` argument to schedule our synth's `triggerAttackRelease` function. 
+One way to make the arpeggiator loop is with `setInterval` as shown above. The problem is that the timing would be kinda loose since native Javascript timing is not very accurate or reliable. Instead we'll use `Tone.Transport.setInterval` which is defined in [Tone.Transport](http://tonejs.org/docs/Tone.Transport.html). Tone's `setInterval` method looks very similar to Javascript's `setInterval`, except that Tone's method passes in the exact time when the event was scheduled to occur (and also takes its interval time in seconds instead of milliseconds). We'll use that `time` argument to schedule our synth's `triggerAttackRelease` function. 
 
 ```javascript
 Tone.Transport.setInterval(function(time){

@@ -1,12 +1,12 @@
 Tone.js has a 7 pre-built synthesizers.
 
-* [Tone.AMSynth](http://tonenotone.github.io/Tone.js/doc/Tone.AMSynth.html)
-* [Tone.DuoSynth](http://tonenotone.github.io/Tone.js/doc/Tone.DuoSynth.html)
-* [Tone.FMSynth](http://tonenotone.github.io/Tone.js/doc/Tone.FMSynth.html)
-* [Tone.MonoSynth](http://tonenotone.github.io/Tone.js/doc/Tone.MonoSynth.html)
-* [Tone.NoiseSynth](http://tonenotone.github.io/Tone.js/doc/Tone.NoiseSynth.html)
-* [Tone.PluckSynth](http://tonenotone.github.io/Tone.js/doc/Tone.PluckSynth.html)
-* [Tone.Sampler](http://tonenotone.github.io/Tone.js/doc/Tone.Sampler.html)
+* [Tone.AMSynth](http://tonejs.org/docs/Tone.AMSynth.html)
+* [Tone.DuoSynth](http://tonejs.org/docs/Tone.DuoSynth.html)
+* [Tone.FMSynth](http://tonejs.org/docs/Tone.FMSynth.html)
+* [Tone.MonoSynth](http://tonejs.org/docs/Tone.MonoSynth.html)
+* [Tone.NoiseSynth](http://tonejs.org/docs/Tone.NoiseSynth.html)
+* [Tone.PluckSynth](http://tonejs.org/docs/Tone.PluckSynth.html)
+* [Tone.Sampler](http://tonejs.org/docs/Tone.Sampler.html)
 
 ### Methods
 
@@ -35,7 +35,7 @@ Each of the instruments also has a number of presets which can be found in the T
 
 ### Tone.PolySynth
 
-Each of these synthesizers' constructors can be fed to the second argument of [Tone.PolySynth](http://tonenotone.github.io/Tone.js/doc/Tone.PolySynth.html) to turn the monophonic voice into a polyphonic synthesizer. 
+Each of these synthesizers' constructors can be fed to the second argument of [Tone.PolySynth](http://tonejs.org/docs/Tone.PolySynth.html) to turn the monophonic voice into a polyphonic synthesizer. 
 
 ```javascript
 //to make a 4 voice MonoSynth
