@@ -50,9 +50,6 @@ lfo.sync();
 var notes = ["C4", "E4", "G4", "A4"];
 var position = 0;
 
-var synth = new Tone.MonoSynth();
-synth.toMaster();
-
 Tone.Transport.setInterval(function(time){
 	var note = notes[position++];
 	position = position % notes.length;
