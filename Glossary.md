@@ -4,7 +4,7 @@
 
 Values that can be automated and scheduled on a single sample level.
 
-see [Sampling Rate]().
+see [Sampling Rate](#sample-rate).
 
 #### Beat
 
@@ -12,7 +12,7 @@ The beat is the basic unit of time, the pulse. A regularly repeating event.
 
 #### Bar
 
-see [Measure](). 
+see [Measure](#measure). 
 
 #### Buffer
 
@@ -48,7 +48,7 @@ Feeding the signal back into itself. For audio effects this is only effective if
 
 #### Filter
 
-[Audio filters](http://en.wikipedia.org/wiki/Audio_filter) amplify or attenuate an incoming signal based on its frequency. Common types are "lowpass" which only let frequencies below the "cutoff" pass through, and highpass which only lets high frequencies pass through. 
+Audio Filters amplify or attenuate an incoming signal based on its frequency. Common types are "lowpass" which only let frequencies below the "cutoff" pass through, and highpass which only lets high frequencies pass through. [[link](http://en.wikipedia.org/wiki/Audio_filter)]
 
 #### Gain
 
@@ -64,15 +64,15 @@ Mid/Side processing separates the the 'mid' signal (which comes out of both the 
 
 #### Measure
 
-A segment of time corresponding to a specific number of beats (the number of beats is determined by the [time signature](). Dividing music into bars provides regular reference points to pinpoint locations within a piece of music.
+A segment of time corresponding to a specific number of beats (the number of beats is determined by the [time signature](#time-signature). Dividing music into bars provides regular reference points to pinpoint locations within a piece of music.
 
 #### Monophonic
 
-A monophonic synthesizer plays only one note at a time. see [Polyphonic](). 
+A monophonic synthesizer plays only one note at a time. see [Polyphonic](#polyphonic). 
 
 #### Polyphonic
 
-A polyphonic synthesizer can play multiple notes at once. 
+A polyphonic synthesizer can play multiple notes at once. see [Monophonic](#monophonic). 
 
 #### Ramp
 
@@ -84,7 +84,7 @@ Sampling is the reduction of a continuous analog audio signal to a discrete sign
 
 #### Signal
 
-A signal is an [audio-rate]() value which can be used to carry sound waves or [sample-rate]() control data. 
+A signal is an [audio-rate](#audio-rate) value which can be used to carry sound waves or [sample-rate](#sampling-rate) control data. 
 
 #### ScriptProcessorNode
 
@@ -96,7 +96,7 @@ Electrical or digital signals which represent sound.
 
 #### Time Signature
 
-Specifies how many [beats](#Beat) are to be contained in each bar. 
+Specifies how many [beats](#beat) are to be contained in each bar. 
 
 #### Transport
 
