@@ -11,8 +11,6 @@ There are a few ways to download and install Tone.js.
 
 ## Using
 
-RequireJS is the recommended way to use Tone.js but it can also be used just as well without it. 
-
 ### without RequireJS
 
 Tone.js can be used like any other script or library by dropping the into the <head> of your page. A global called `Tone` will be added to the `window`. 
