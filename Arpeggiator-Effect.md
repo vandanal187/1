@@ -28,7 +28,7 @@ Making the lfo modulate the filter's frequency is as simple as connecting it to 
 lfo.connect(filter.frequency);
 ```
 
-Lastly, we'll synchronize the LFO to `Tone.Transport` so that when the Transport is started, as will the LFO. Additionally, when the Transport's tempo is changed, the LFO's modulation frequency will also change. 
+Lastly, we'll synchronize the LFO to `Tone.Transport` so that when the Transport is started, as will the LFO. Additionally, when the Transport's tempo is changed, the LFO's modulation frequency will also change so that it stays a sixteenth note ("16n") relative to the current tempo. 
 
 ```javascript
 lfo.sync();
