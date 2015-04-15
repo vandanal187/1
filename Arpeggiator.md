@@ -86,4 +86,4 @@ Tone.Transport.setInterval(function(time){
 Tone.Transport.start();
 ```
 
-In the [next example](ArpeggiatorEffect), we'll add an effect. 
+In the [next example](Arpeggiator-Effect), we'll add an effect. 
