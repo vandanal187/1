@@ -1,6 +1,6 @@
 # Tone.Time
 
-Tone.Time is a representation of time which all time-related methods accept. Below are some examples of the various forms Tone.Time can take. 
+Tone.Time is a representation of time. All methods which take time as an argument also take Tone.Time. Below are some examples of the various forms Tone.Time can take. 
 
 ### Numbers
 
