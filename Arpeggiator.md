@@ -20,7 +20,7 @@ synth.toMaster();
 
 We can trigger the synth to start the attack portion of the note using `triggerAttack` -- this method takes a note and a time as arguments. To start the release portion of the note, call `triggerRelease`. Check out [this Wikipedia article](http://en.wikipedia.org/wiki/Synthesizer#ADSR_envelope) for more information about synthesizer envelopes.
 
-For example, let's trigger the note `"C4"` then trigger the release a quarter second later (all values are in seconds):
+Let's trigger the note `"C4"` then trigger the release a quarter second later (all values are in seconds):
 
 ```javascript
 synth.triggerAttack("C4", time);
@@ -35,7 +35,7 @@ synth.triggerAttackRelease("C4", 0.25, time);
 
 ### The Arpeggio
 
-Next let's pick a set of notes to arpeggiate over, like a C pentatonic scale. Then we'll set an interval and get the next note from the array on every loop. If the last argument of `triggerAttackRelease` is ommited, it defaults to the current time.
+Next let's pick a set of notes to arpeggiate over, like a C pentatonic scale. We'll set an interval and get the next note from the array on every loop. If the last argument of `triggerAttackRelease` is ommited, it defaults to the current time.
 
 ```javascript
 var notes = ["C4", "E4", "G4", "A4"];
@@ -50,7 +50,7 @@ setInterval(function(){
 
 ### Timing the Notes
 
-One way to make the arpeggiator loop is with `setInterval` as shown above. The problem is that the timing would be kinda loose since native Javascript timing is not very accurate or reliable. Instead we'll use `Tone.Transport.setInterval` which is defined in [Tone.Transport](http://tonejs.org/docs/Tone.Transport.html). Tone's `setInterval` method looks very similar to Javascript's `setInterval`, except that Tone's method passes in the exact time when the event was scheduled to occur (and also takes its interval time in seconds instead of milliseconds). We'll use that `time` argument to schedule our synth's `triggerAttackRelease` function. 
+One way to make the arpeggiator loop is with `setInterval` as shown above. The problem is that the timing would be kinda loose since native Javascript timing is not very accurate or reliable. Instead we'll use `Tone.Transport.setInterval` which is defined in [Tone.Transport](http://tonejs.org/docs/Tone.Transport.html). Tone's `setInterval` method looks very similar to Javascript's `setInterval`, except that Tone's method passes in the exact time when the event was scheduled to occur (and also takes its interval time in seconds instead of milliseconds). We'll use that `time` argument to schedule our synth's `triggerAttackRelease` function with precise timing. 
 
 ```javascript
 Tone.Transport.setInterval(function(time){
@@ -59,7 +59,7 @@ Tone.Transport.setInterval(function(time){
 }, 0.5);
 ```
 
-The transport won't start firing events until it's started. 
+The Transport won't start firing events until it's started. 
 
 ```javascript
 Tone.Transport.start();
@@ -74,8 +74,7 @@ Here's what it looks like all together:
 var notes = ["C4", "E4", "G4", "A4"];
 var position = 0;
 
-var synth = new Tone.MonoSynth();
-synth.toMaster();
+var synth = new Tone.MonoSynth().toMaster();
 
 Tone.Transport.setInterval(function(time){
 	var note = notes[position++];
