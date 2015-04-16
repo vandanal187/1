@@ -1,4 +1,13 @@
-Tone has multiple types of envelopes for different purposes. Each of the envelopes is an [ADSR](http://en.wikipedia.org/wiki/Synthesizer#ADSR_envelope) and all of the timings can be set as tempo-relative values which will stay synchronized with the tempo even as the bpm changes. 
+Tone has multiple types of envelopes for different purposes. Each of the envelopes is an [ADSR](http://en.wikipedia.org/wiki/Synthesizer#ADSR_envelope) and all of the timings use tempo-relative Tone.Time stay synchronized with the tempo even as the bpm changes. 
+
+
+### Envelope Phases
+
+![ADSR](http://upload.wikimedia.org/wikipedia/commons/e/ea/ADSR_parameter.svg)
+
+The `attack` portion of the envelope makes the output signal transition from 0 to 1 over the duration of the attack time. When the peak value is reached, the envelope will fall to the sustain value. The decay time is given with the `decay` attribute. The envelope will remain at the sustain value, until the release is triggered. The time it takes for the envelope to go from the sustain value back to 0 is given by the `release` time. 
+
+### Types
 
 #### Tone.Envelope
 
