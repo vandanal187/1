@@ -6,11 +6,11 @@ There are a few ways to install and use Tone.js using either `npm` or `bower` or
 
 ## Working with Tone.js
 
-To get started sequencing and synthesizing notes, take a look at a basic [arpeggiator walkthrough](Arpeggiator). Once you've completed that, you can [add a basic effect](Arpeggiator Effect) to your arpeggiator. 
+To get started sequencing and synthesizing notes, take a look at a basic [arpeggiator walkthrough](Arpeggiator).
 
 ### Time
 
-Tone.Time is a feature which lets you think in terms of musical timing instead of seconds. Every method which takes time as an argument also accepts [Tone.Time](Time). The value of Tone.Time is relative to the current tempo of the Tone.Transport. 
+Time in Tone.js lets you think in musical timing instead of seconds. Every method which takes time as an argument also accepts [Time](Time). The value of Time is relative to the current tempo of the Tone.Transport. 
 
 ### Signals
 
