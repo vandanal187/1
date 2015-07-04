@@ -1,10 +1,14 @@
 # Glossary of Terminology
 
+#### Amplitude
+
+Amplitude is the highest value of a wave. 
+
 #### Audio-Rate
 
 Values that can be automated and scheduled on a single sample level.
 
-see [Sampling Rate](#sample-rate).
+see [Sampling Rate](#sampling-rate).
 
 #### Beat
 
@@ -16,7 +20,7 @@ see [Measure](#measure).
 
 #### Buffer
 
-A buffer is an array of audio data. Buffer values are in the range of +1 to -1. 
+A buffer is an array of audio data. Typically values are in the range of +1 to -1. 
 
 #### Bus
 
@@ -33,6 +37,10 @@ Dynamic range compression or simply compression reduces the volume of loud sound
 #### Convolution
 
 Convolution is a process used for simulating the reverberation or effects. It is based on the mathematical convolution operation, and uses a pre-recorded audio sample of the impulse response of the space being modeled. [[link](http://en.wikipedia.org/wiki/Convolution_reverb)]
+
+#### Decibel
+
+A Decibel is a logarithmic ratio between two values. Since we perceive loudness on a logarithmic scale, decibels are a useful quantifier for volume. [[link](http://www.soundonsound.com/sos/1994_articles/feb94/decibels.html)]
 
 #### Dry/Wet Control
 

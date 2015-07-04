@@ -1,13 +1,4 @@
-Tone.js has a number of built in audio sources:
-
-* [Tone.Oscillator](http://tonejs.org/docs/Tone.Oscillator.html)
-* [Tone.PulseOscillator](http://tonejs.org/docs/Tone.PulseOscillator.html)
-* [Tone.PWMOscillator](http://tonejs.org/docs/Tone.PWMOscillator.html)
-* [Tone.OmniOscillator](http://tonejs.org/docs/Tone.OmniOscillator.html)
-* [Tone.Player](http://tonejs.org/docs/Tone.Player.html)
-* [Tone.Noise](http://tonejs.org/docs/Tone.Noise.html)
-
-#### Tone.Oscillator
+#### [Tone.Oscillator](http://localhost:8000/Tonejs.org/docs/#Oscillator)
 
 A wrapper around the native OscillatorNode which simplifies starting and stopping and includes additional parameters such as phase rotation.
 
@@ -18,7 +9,9 @@ var osc = new Tone.Oscillator(440, "square")
 	.start(); // start it right away
 ```
 
-#### Tone.Player
+Tone.Oscillator also includes modifiers on the default oscillator types. Set the type to `"square4"` to hear the first 4 partials of the square wave, or `"triangle9"` for the first 9 partials of the triangle wave. 
+
+#### [Tone.Player](http://localhost:8000/Tonejs.org/docs/#Player)
 
 Tone.Player plays an audio file. 
 
@@ -42,15 +35,15 @@ Tone.Buffer.onload = function(){
 };
 ```
 
-#### Tone.PulseOscillator
+#### [Tone.PulseOscillator](http://localhost:8000/Tonejs.org/docs/#PulseOscillator)
 
 A pulse wave is like a square wave, but instead of having a duty-cycle which is 50% up and 50% down, the pulse oscillator lets you set the `width` of the oscillator. A width of 10% (`pulse.width.value = 0.1`) would produce a wave which is up 10% of the time and down 90% of the time. A width of 90% would sound identical to a wave at 10%, but be in the opposite phase. 
 
-#### Tone.PWMOscillator
+#### [Tone.PWMOscillator](http://localhost:8000/Tonejs.org/docs/#PWMOscillator)
 
 The pulse width modulation oscillator varies the width of the PulseOscillator with another wave. It has an additional control over the `modulationWidth`. 
 
-#### Tone.OmniOscillator
+#### [Tone.OmniOscillator](http://localhost:8000/Tonejs.org/docs/#OmniOscillator)
 
 Tone.OmniOscillator encompasses Tone.Oscillator, Tone.PWMOscillator and Tone.PulseOscillator which allows you to set it to be "sine", "square", "triangle", "sawtooth", "pwm", or "pulse". 
 

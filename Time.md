@@ -1,6 +1,6 @@
-# Tone.Time
+# [Time](http://tonejs.org/docs/#Time)
 
-Tone.Time is a representation of time. All methods which take time as an argument also take Tone.Time. Below are some examples of the various forms Tone.Time can take. 
+All methods which take time as an argument also take Time. Below are some examples of the various forms Time can take. 
 
 ### Numbers
 

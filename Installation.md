@@ -23,8 +23,6 @@ or from the Tone's CDN
 <script type="text/javascript" src="http://cdn.tonejs.org/latest/Tone.min.js"></script>
 ```
 
-To use any of the instrument and effect presets, be sure to grab the [Tone.Presets build](https://raw.githubusercontent.com/TONEnoTONE/Tone.js/master/build/Tone.Preset.js) which is not included in the default build. 
-
 ### RequireJS
 
 [RequireJS](http://requirejs.org/) is a JavaScript module loader which Tone.js uses internally for dependency management. It is a powerful tool for development and deploying. Using r.js (RequireJS's optimizer) can bring package size down significantly since it will only include the modules used in your code. 
@@ -53,3 +51,5 @@ require.config({
 require(["Tone/core/Transport"], function(Transport){
     //...
 ```
+
+[Here](http://tonejs.org/examples/require.html) is an example using requirejs in its directory structure. 

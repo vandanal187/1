@@ -1,4 +1,4 @@
-Tone.Signal plays an important role in Tone.js by allowing audio-rate control over many attributes. It is similar, but more flexible than the Web Audio API's native [AudioParam](http://webaudio.github.io/web-audio-api/#the-audioparam-interface) and allows sample-accurate control synchronization of a node's attributes.
+[Tone.Signal](http://tonejs.org/docs/#Signal) plays an important role in Tone.js by allowing audio-rate control over many attributes. It is similar, but more flexible than the Web Audio API's native [AudioParam](http://webaudio.github.io/web-audio-api/#the-audioparam-interface) and allows sample-accurate control synchronization of a node's attributes.
 
 ## Setting values
 
@@ -12,15 +12,6 @@ oscillator.frequency.value = 100; //sets the value immediately
 ```
 
 `.value` has to be used because Tone.Signal is not merely a number, but an audio-rate signal meaning it outputs a value on every sample and is also capable of sample-accurate automations. 
-
-## Units
-
-The unit type of a signal can be set to make setting and getting values more understandable and intuitive.
-
-* `"number"` - the default unit. 
-* `"db"` - the set value will be converted from decibels to gain.
-* `"time"` - the set value is converted from Tone.Time into seconds. 
-* `"frequency"` - the set value is converted from Tone.Frequency into a number. 
 
 ## Scheduling values
 
@@ -47,6 +38,4 @@ Tone.Signal is implemented in a very simple way. Each instance is just a GainNod
 
 ## Operators
 
-There are dozens of operators on signals to perform [math](SignalMath), [logic](SignalLogic), and [routing](SignalRouting). 
-
-There is also an operator aggregator called [Tone.Expr](Expr) which makes it easier to write complex signal expressions. 
+There are dozens of operators on signals to perform math, logic and routing.  
