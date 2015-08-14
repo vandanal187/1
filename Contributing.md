@@ -32,3 +32,14 @@ All classes have a dispose method where all their members are disconnected, disp
 * 4 space TAB indentation. 
 * 1 empty line between function definitions. 
 
+# Transfer Notice
+
+I've moved the repo to a new organization devoted entirely to Tone.js. While all of the links will automatically forward to the new repo, if you forked before the change, you'll have to update the remote url in order to pull or make pull requests. 
+
+```bash
+git remote set-url origin https://github.com/Tonejs/Tone.js.git
+```
+or, if you use ssh:
+```bash
+git remote set-url origin git@github.com:Tonejs/Tone.js.git
+```
