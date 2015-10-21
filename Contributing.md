@@ -43,6 +43,10 @@ There is always more work that can be done on documentation. Especially adding g
 
 Along with this, I'd love to integrate an interactive, nested graph visualization which could be embedded in the docs for each class and show you the exact signal flow for each component. It'd be great if this graph could be automatically extracted from the code. 
 
+### Tutorials
+
+I'd love to see more tutorials for newcomers to Tone.js to help them get up and running or solve a particular issue. If you make a tutorial, please send me a link.
+
 ### Synths/Effects
 
 If you'd like to contribute a cool and expressive synth or effect, i'd love to hear it. Please send me an example that i can play with along with the PR. 
