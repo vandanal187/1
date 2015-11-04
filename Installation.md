@@ -7,7 +7,7 @@ There are a few ways to download and install Tone.js.
 * Github - [full](https://raw.githubusercontent.com/TONEnoTONE/Tone.js/master/build/Tone.js) | [min](https://raw.githubusercontent.com/TONEnoTONE/Tone.js/master/build/Tone.min.js)
 * [Bower](http://bower.io/) - bower install tone
 * [npm](https://www.npmjs.org/) - npm install tone
-* [cdn](http://cdn.tonejs.org/latest/Tone.min.js) - CDN (not for production use, please)
+* [cdn](http://cdn.tonejs.org/latest/Tone.min.js) - CDN by github pages
 
 ## Using
 
