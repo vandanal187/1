@@ -1,6 +1,7 @@
-# [Time](http://tonejs.org/docs/#Time)
+All methods which take time as an argument accept a String or Number. Time encoded as a Number is assumed to be seconds and returned. Time encoded as a String can take various forms in order to synchronize it to the Tone.Transport. 
 
-All methods which take time as an argument also take Time. Below are some examples of the various forms Time can take. 
+
+## Examples:
 
 ### Numbers
 
@@ -32,6 +33,13 @@ Seconds can also be described in Hz.
 * `"1hz"` = 1 second
 * `"5hz"` = 0.2 seconds
 
+### Ticks
+
+A time relative to the Transport's PPQ (Pulse Per Quarter). The number before the 'i' needs to be an integer.
+
+* `"1i"` = 1 tick
+* `"192i"` = 4 quarter notes at 48 PPQ = 2 seconds.
+
 ### Now-Relative 
 
 Prefix any of the above with "+" and it will be interpreted as "the current time plus whatever expression follows"
@@ -50,10 +58,21 @@ Any of the above can also be combined into a mathematical expression which will 
 
 Methods which accept time, no argument (`undefined`) will be interpreted as "now" (i.e. the `audioContext.currentTime`). 
 
-For example, Tone.MonoSynth's `triggerAttack` method will accept a time as the second argument, or if a time is ommitted, the it will default to "now".
+For example, Tone.MonoSynth's `triggerAttack` method will accept a time as the second argument, or if a value is ommitted, the it will default to "now".
 
 ```javascript
 synth.triggerAttack();//context.currentTime
 synth.triggerRelease("+4n"); //a quarter-note from now
 ```
+
+## Quantization
+
+Using the `@` symbol, a Time can be quantized relative to the the Transport's grid. The expression on the left of the `@` is quantized against the Time to the right of the symbol.
+
+* `"1.4 @ 4n"` = 1.5 if the BPM is 120
+* `"@1m"` = If the Transport is started, this will return the time of the next measure 
+
+The expression can be placed between parenthesis and composed with other expressions. 
+
+* `"(@1m) + 4n"` = the second beat of the next measure.
 
