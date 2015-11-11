@@ -99,7 +99,9 @@ Nested arrays will subdivide that index by the length of the subarray and `null`
 
 ```javascript
 //a dotted quarter-note followed by an 8th note triplet
-var seq = new Tone.Sequence(callback, ["C3", [null, "Eb3"], ["F4", "Bb4", "C5"]], "4n");
+var seq = new Tone.Sequence(function(time, note){
+	//play the note
+}, ["C3", [null, "Eb3"], ["F4", "Bb4", "C5"]], "4n");
 ```
 
 Sequences are set to loop by default at whatever the length of the events array is. 
