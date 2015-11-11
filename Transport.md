@@ -1,63 +1,91 @@
-A unique feature of the library is the oscillator-based Transport which allows for application-wide synchronization of sources and signals. The Transport allows you to register callbacks at precise moments along the timeline which are invoked right before the event with the exact time of the event. Additionally, because the Transport is implemented with an oscillator, it is capable of elaborate tempo curves and automation. 
+Tone.Transport is the master timekeeper, allowing for application-wide synchronization of sources, signals and events along a shared timeline. Callbacks scheduled with Tone.Transport will be invoked just before the scheduled time with the **exact** time of the event is passed in as the first parameter to the callback. 
 
-### Timing Methods
+Tone.Transport's callbacks pass `time` into the callback because, without the Web Audio API, Javascript timing can be quite imprecise. For example, `setTimeout(callback, 100)` will be invoked _around_ 100 milliseconds later, but many musical applications require sub-millisecond accuracy. The Web Audio API provides sample-accurate scheduling for methods like like `start`, `stop` and `setValueAtTime`, so we use the use the precise `time` parameter passed into the callback to schedule methods within the callback. 
 
-There are three methods for timing events with Tone.Transport. All three methods have the same interface: they take a function and a time and return the ID of the event which was scheduled. The function is invoked just before the time scheduled. Because the timing of the callback is dependent on many factors and might not be very precise, the sample-accurate timing of the event is passed in as the argument to the callback function.
+Additionally, by abstracting away the Web Audio clock, Tone.Transport let's you think in musical timing. In the Web Audio API, all time values are in terms of the AudioContext's time, which starts at 0 when the page is loaded and counts upward in seconds. With Tone.Transport, you can schedule events in bars and beats without of having to convert everything to seconds.
 
-#### Tone.Transport.setInterval
 
-like the native `setInterval`, `Tone.Transport.setInterval` will schedule a repeating event at the interval specified. These events will only be invoked when the Transport is playing. 
+## Basics
 
 ```javascript
-//this will start the player on every quarter note
-Tone.Transport.setInterval(function(time){
-	player.start(time);
-}, "4n");
-//start the Transport for the events to start
+Tone.Transport.schedule(function(time){
+	//time = sample accurate time of the event
+}, "1m");
+```
+
+The above callback will be invoked each time the Transport reaches the first measure. If the Transport is set to loop, or stopped and restarted, the callback will fire each time it reaches the scheduled position along the timeline. 
+
+The callback won't fire until the Transport is started. 
+
+```
 Tone.Transport.start();
 ```
 
-#### Tone.Transport.setTimeout
+## Scheduling API
 
-Set a single event in the future relative to the current Transport position with ```Tone.Transport.setTimeout```
+There are three basic methods for timing events with Tone.Transport; `schedule`, `scheduleRepeat` and `scheduleOnce`. All three of these methods return a unique ID which can be used to cancel the callback using `clear`. 
+
+#### `schedule(callback, time)`
+
+`Tone.Transport.schedule` will add a callback event to a specific position along the Transport which will be invoked each time the Transport reaches that position.
 
 ```javascript
-//this will start an oscillator 5 seconds from now
-Tone.Transport.setTimeout(function(time){
-	osc.start(time);
-}, 5);
-Tone.Transport.start();
+Tone.Transport.schedule(function(time){
+	//invoked when the Transport starts
+}, 0);
 ```
 
-#### Tone.Transport.setTimeline
+#### `scheduleRepeat(callback, interval, startTime, duration)`
 
-`Tone.Transport.setTimeline` will schedule an event relative to the start of the timeline. These events will start, stop and loop with the Transport. 
+Schedule an event to be invoked at the given interval, starting at `startTime` and for the specified `duration`. If no `startTime` is passed in, the interval will start at the current tick if the Transport is started, or at 0 if the Transport is stopped. If no `duration` is given, 
+the callback will repeat infinitely. 
+
+```javascript
+//play a note every eighth note starting from the first measure
+Tone.Transport.scheduleRepeat(function(time){
+	note.triggerAttack(time);
+}, "8n", "1m");
+```
+
+#### `scheduleOnce(callback, time)`
+
+Schedule an event which will only be invoked once. After the event is invoked, it will be removed. If the given `time` is before the current Transport's position, the event will be invoked immediately. 
+
+
+#### `clear(eventID)`
+
+Each of the scheduling methods returns a unique ID. This ID can be used to cancel the event using `clear`. 
 
 ### Attributes
 
-#### bpm
+#### `bpm`
 
-`bpm` is a Tone.Signal which allows it to be automated and scheduled like any other Tone.Signal. 
+Tempo-relative values (like `"1m"`) are evaluated against the Transport's bpm (beats per minute) value. `Tone.Transport.bpm` is a signal-rate value, which means that it's capable of smooth tempo-curves and automation. All callbacks scheduled with the Transport will adjust their timing to match the new tempo. 
 
 ```javascript
-//set the bpm to 120 right away
-Tone.Transport.bpm.value = 120;
-//ramp to a bpm of 240 over 5 seconds
-Tone.Transport.bpm.rampTo(240, 5);
+//smoothly ramp the tempo to 240 bpm over 4 seconds
+Tone.Transport.bpm.rampTo(240, 4);
 ```
 
-#### loop
 
-When `loop` is set to `true`, the Transport will loop between `loopStart` and `loopEnd`. This will not affect the `setInterval` and `setTimeout` methods, it will only affect `setTimeline`. 
+#### `loop`
 
-#### timeSignature
+When `loop` is set to `true`, the Transport will loop between `loopStart` and `loopEnd`. 
 
-The transport is capable of any time signature, but the value must be reduced to a number over 4. So for example, 4/4 time would be set as just 4, and 6/8 time would be set as 3. 
+#### `timeSignature`
 
-#### swing
+The transport is capable of any time signature, but the value will be reduced to a number over 4. So for example, 4/4 time would be set as just 4, and 6/8 time would be set as 3. 
+
+If an array is given, it will be reduced to just the numerator value over 4 (`[7, 8]` becomes just `3.5`).
+
+#### `swing`
 
 The transport has a `swing` attribute which is a number between 0-1. It controls how laid back the `swingSubdivision`. 
 
-#### swingSubdivision
+#### `swingSubdivision`
 
-The `swingSubdivision` sets which subdivision to apply the swing to. The default value is `"16n"`, but can be set to anything less than a quarter note. 
+The `swingSubdivision` sets which subdivision to apply the swing to. The default value is `"16n"`. The subdivision can be set to anything less than a quarter note. The downbeat will never be swung. 
+
+# References
+
+[Chris Wilson's great explanation of Web Audio scheduling.](http://www.html5rocks.com/en/tutorials/audio/scheduling/)
