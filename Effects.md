@@ -2,7 +2,7 @@ Tone.js also has a bunch of stereo and mono effects.
 
 To add an effect to your audio signal, simply connect the effect in between your source and destination. Here is an example which routes a [Tone.SimpleSynth](http://tonejs.org/docs/#SimpleSynth) through a [Tone.Distortion](http://tonejs.org/docs/#Distortion). 
 
-```
+```javascript
 //create an effect and connect it to the master output
 var dist = new Tone.Distortion().toMaster();
 //create a synth and connect it to the effect
@@ -13,7 +13,7 @@ synth.triggerAttackRelease("C4", "8n");
 
 ### dry/wet
 
-All ffects have a dry/wet control called `wet` which controls how much of the effected ("wet") signal is output compared to the uneffected ("dry") signal. The default value for the effects is 100% wet. 
+All effects have a dry/wet control called `wet` which controls how much of the effected ("wet") signal is output compared to the uneffected ("dry") signal. The default value for the effects is 100% wet. 
 
 ```javascript
 // 50/50 mix
