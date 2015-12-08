@@ -59,5 +59,3 @@ And start the Transport to get the clock going.
 ```
 Tone.Transport.start();
 ```
-
-In the [next example](https://github.com/TONEnoTONE/Tone.js/wiki/Arpeggiator-Effect), we'll add an effect. 
