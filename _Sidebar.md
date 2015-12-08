@@ -6,6 +6,7 @@
 * [Effects](Effects)
 * [Sources](Sources)
 * [Signals](Signals)
+* [Event Classes](Events)
 
 ##### Tutorials
 * [Making connections](Connections)
