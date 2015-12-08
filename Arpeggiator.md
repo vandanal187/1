@@ -38,51 +38,25 @@ synth.triggerAttackRelease("C4", 0.25, time);
 Next let's pick a set of notes to arpeggiate over, like a C pentatonic scale. We'll set an interval and get the next note from the array on every loop. If the last argument of `triggerAttackRelease` is ommited, it defaults to the current time.
 
 ```javascript
-var notes = ["C4", "E4", "G4", "A4"];
-var position = 0;
-
-setInterval(function(){
-	var note = notes[position++];
-	position = position % notes.length;
+var pattern = new Tone.Pattern(function(time, note){
 	synth.triggerAttackRelease(note, 0.25);
-}, 500);
+}, ["C4", "E4", "G4", "A4"]);
 ```
 
-### Timing the Notes
+[Tone.Pattern](http://tonejs.org/docs/#Pattern) will arpeggiate over the given array in a number of different ways (`"up"`, `"down"`, `"upDown"`, `"downUp"`, `"random"` and more). By default the pattern will iterate upward and then loop back to the beginning. 
 
-One way to make the arpeggiator loop is with `setInterval` as shown above. The problem is that the timing would be kinda loose since native Javascript timing is not very accurate or reliable. Instead we'll use `Tone.Transport.setInterval` which is defined in [Tone.Transport](http://tonejs.org/docs/#Transport). Tone's `setInterval` method looks very similar to Javascript's `setInterval`, except that Tone's method passes in the exact time when the event was scheduled to occur (and also takes its interval time in seconds instead of milliseconds). We'll use that `time` argument to schedule our synth's `triggerAttackRelease` function with precise timing. 
+As with all [Event classes](https://github.com/Tonejs/Tone.js/wiki/Events), `time` is passed in as the first argument. This is very important because native Javascript timing is pretty loose. Callbacks scheduled with `setInterval` for example, will happen _around_ the given time, but there is no guarantee on precision; that's not good enough for musical events. 
 
-```javascript
-Tone.Transport.setInterval(function(time){
-	...
-	synth.triggerAttackRelease(note, 0.25, time);
-}, 0.5);
+The last thing to do is to start the pattern from the beginning of the Transport timeline. 
+
+```
+//begin at the beginning
+pattern.start(0);
 ```
 
-The Transport won't start firing events until it's started. 
+And start the Transport to get the clock going.
 
-```javascript
-Tone.Transport.start();
 ```
-
-### Putting It Together
-
-Here's what it looks like all together:
-
-
-```javascript
-var notes = ["C4", "E4", "G4", "A4"];
-var position = 0;
-
-var synth = new Tone.SimpleSynth().toMaster();
-
-Tone.Transport.setInterval(function(time){
-	var note = notes[position++];
-	position = position % notes.length;
-	synth.triggerAttackRelease(note, 0.25, time);
-}, 0.5);
-
-//the transport won't start firing events until it's started
 Tone.Transport.start();
 ```
 
