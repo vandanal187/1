@@ -1,6 +1,6 @@
 ## Download
 
-* CDN by Github pages - [full](http://cdn.tonejs.org/latest/Tone.js) | [min](http://cdn.tonejs.org/latest/Tone.min.js)
+* download from Github pages - [full](http://cdn.tonejs.org/latest/Tone.js) | [min](http://cdn.tonejs.org/latest/Tone.min.js)
 * [bower](http://bower.io/) - `bower install tone`
 * [npm](https://www.npmjs.org/) - `npm install tone`
 
@@ -24,11 +24,11 @@ Note: it's always safer to use a specific version rather than "latest"
 
 ### Module Loaders
 
-Tone uses AMD internally for dependency management. 
+Internally, Tone uses AMD for dependency management. But the build process adds a UMD footer to the built file which makes it compatible with both AMD and CommonJS. 
 
-#### Using the Tone.js build
+#### Tone.js build
 
-The build of Tone.js is UMD compatible. You can include it like any other dependency:
+You can include the build file (which is available from one of the links above) like any other dependency using either AMD or CommonJS style:
 
 ```javascript
 require(["Tone"], function(Tone){
@@ -45,11 +45,15 @@ var synth = new MonoSynth();
 
 #### Individual Files
 
-Using individual files with a module loader can bring your package size down significantly since it will only include the modules used in your code. You'll have to familiarize yourself with Tone.js' directory structure since files have to be referenced with their full path. Make sure that the directory `Tone` points to the `Tone` directory of the source code so that internal dependencies can resolve. 
+Using individual files with a module loader can bring your package size down significantly since it will only include the modules used in your code. You'll have to familiarize yourself with Tone.js' directory structure since files have to be referenced with their full path. 
 
+To use the individual files, you'll need a `require` framework which supports AMD like [RequireJS](http://requirejs.org/), [webpack](https://webpack.github.io/), or [deAMDify](https://github.com/jaredhanson/deamdify) for browserify. 
+
+**The path to the root [Tone](https://github.com/Tonejs/Tone.js/tree/master/Tone) folder needs to be in the search path so that internal dependencies can resolve.**
+
+##### RequireJS Paths
 
 ```javascript
-//Using 'paths' in RequireJS
 require.config({
     baseUrl: "./base",
     paths: {
@@ -58,4 +62,15 @@ require.config({
 });
 require(["Tone/core/Transport"], function(Transport){
     //...
+```
+
+##### Webpack
+
+```javascript
+module.exports = {
+	resolve: {
+		root: __dirname,
+		modulesDirectories : ["path/to/Tone.js/"],
+	},
+	//...
 ```
