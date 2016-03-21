@@ -1,6 +1,6 @@
 # Installing Dependencies
 
-Tone.js uses [grunt](http://gulpjs.com/) and [requirejs](http://requirejs.org/) for building and dependency management. 
+Tone.js uses [gulp](http://gulpjs.com/) and [requirejs](http://requirejs.org/) for building and dependency management. 
 
 Make sure you have both of those installed (as well as [node.js](nodejs.org)) and then run npm install from the `gulp` directory to install all of the dependencies listed in `package.json`. 
 
