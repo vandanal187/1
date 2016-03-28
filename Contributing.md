@@ -10,7 +10,7 @@ Please get in touch (yotammann@gmail.com) and tell me what features you'd like t
 
 ## Setup
 
-The dependencies required to build and develop the library can be installed using `npm install` from the `grunt` directory.
+The dependencies required to build and develop the library can be installed using `npm install` from the `gulp` directory.
 
 # Style
 
