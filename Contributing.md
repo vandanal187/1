@@ -2,7 +2,7 @@
 
 Bug fixes, examples, and contributions are welcome!
 
-Please get in touch (yotammann@gmail.com) and tell me what features you'd like to see or contribute to. 
+Please get in touch (yotam@tonejs.org) and tell me what features you'd like to see or contribute to. 
 
 **Please make all Pull Requests to the `dev` branch.**
 
