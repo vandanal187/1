@@ -2,7 +2,7 @@ Tone.Transport is the master timekeeper, allowing for application-wide synchroni
 
 Tone.Transport's callbacks pass `time` into the callback because, without the Web Audio API, Javascript timing can be quite imprecise. For example, `setTimeout(callback, 100)` will be invoked _around_ 100 milliseconds later, but many musical applications require sub-millisecond accuracy. The Web Audio API provides sample-accurate scheduling for methods like like `start`, `stop` and `setValueAtTime`, so we use the use the precise `time` parameter passed into the callback to schedule methods within the callback. 
 
-Additionally, by abstracting away the Web Audio clock, Tone.Transport lets you think in musical timing. In the Web Audio API, all time values are in terms of the AudioContext's time, which starts at 0 when the page is loaded and counts upward in seconds. With Tone.Transport, you can schedule events in bars and beats without of having to convert everything to seconds.
+Additionally, by abstracting away the Web Audio clock, Tone.Transport lets you think in musical timing. In the Web Audio API, all time values are in terms of the AudioContext's time, which starts at 0 when the page is loaded and counts upward in seconds. With Tone.Transport, you can schedule events in bars and beats without having to convert everything to seconds.
 
 
 ## Basics
