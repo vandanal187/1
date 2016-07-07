@@ -1,4 +1,4 @@
-This page describes the relationship between the AudioContext time and the Transport's TimelinePosition.
+This page describes the relationship between the AudioContext time and the Transport's Time.
 
 ## Scheduling with AudioContext time
 
@@ -36,7 +36,7 @@ Tone.Transport provides an abstraction over the AudioContext time which allows y
 
 Essentially, the Transport provides another clock that you can use to schedule events without thinking too much about what the current AudioContext time is. In the end, all Web Audio events need to be scheduled using the AudioContext time because this number is necessary for sample-accurate scheduling. Tone.js make it so that you rarely need to use the AudioContext's time directly.
 
-#### Scheduling with TimelinePosition
+#### Scheduling with TransportTime
 
 If we wanted to play a short sine tone every 2 seconds indefinitely we might use Tone.Loop. 
 
@@ -49,7 +49,7 @@ var loop = new Tone.Loop(function(time){
 
 One thing to notice here is that `time` is passed in as the first argument to the callback function. This time is the AudioContext time when the event should be scheduled. To make the duration a half-second, we schedule the stop 0.5 seconds after the passed in time just like the button-click example.
 
-The `loop` we scheduled will not play until started. Tone.Loop and all classes which extend Tone.Event are scheduled with time values relative to the Transport time (and not the AudioContext time like the examples above). In the documentation this Transport timeline-relative positioning is called [TimelinePosition](TODO). TimelinePosition has all the same tempo-relative encodings as Time, but the event is scheduled against a specific position along the Transport. 
+The `loop` we scheduled will not play until started. Tone.Loop and all classes which extend Tone.Event are scheduled with time values relative to the Transport time (and not the AudioContext time like the examples above). In the documentation this Transport timeline-relative positioning is called [TransportTime](TODO). TransportTime has all the same tempo-relative encodings as Time, but the event is scheduled against a specific position along the Transport. 
 
 So we may want to schedule this loop to start from the beginning of the Transport (time = 0). 
 
@@ -62,7 +62,7 @@ But even once we call start on the loop, our Transport has not been started yet,
 ```javascript
 Tone.Transport.start();
 ```
-Unlike the Tone.Event classes, `Tone.Transport.start` takes the AudioContext time as the argument and not the TimelinePosition. No argument evaluates to the `currentTime` of the AudioContext. No arguments for the `start` parameter of Tone.Event classes evaluates to the current position of the Transport. 
+Unlike the Tone.Event classes, `Tone.Transport.start` takes the AudioContext time as the argument and not the TransportTime. No argument evaluates to the `currentTime` of the AudioContext. No arguments for the `start` parameter of Tone.Event classes evaluates to the current position of the Transport. 
 
 ## Example
 
