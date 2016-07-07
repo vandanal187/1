@@ -15,7 +15,7 @@
 * [Glossary](Glossary)
 * [Understanding Envelopes](Envelope)
 * [Time](Time)
-* [TimelinePosition](TimelinePosition)
+* [TransportTime](TransportTime)
 
 ##### Dev
 * [Contributing](Contributing)
