@@ -37,3 +37,9 @@ An amplitude envelope is just a Tone.Envelope connect to a GainNode so that audi
 #### [Tone.ScaledEnvelope](http://tonejs.org/docs/#ScaledEnvelope)
 
 Tone.ScaledEnvelope has a range which starts at `min` and ramps to `max`. The `min` value can be larger than the `max`, it just represents what value the envelope starts at and ramps to. 
+
+# Curves
+
+The curve of the attack and release can be controlled by `attackCurve` and `releaseCurve`. These either take a string like "linear", "exponential", "sine", or an array of values to be used as the curve. Below are the curve names and their shapes. 
+
+![curves](https://docs.google.com/drawings/d/1Lrz75eaAaLcS0SpgYih7cDS9GDiJlhRfStIxXfx8qj0/pub?w=642&h=1579)
