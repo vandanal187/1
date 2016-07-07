@@ -49,7 +49,7 @@ var loop = new Tone.Loop(function(time){
 
 One thing to notice here is that `time` is passed in as the first argument to the callback function. This time is the AudioContext time when the event should be scheduled. To make the duration a half-second, we schedule the stop 0.5 seconds after the passed in time just like the button-click example.
 
-The `loop` we scheduled will not play until started. Tone.Loop and all classes which extend Tone.Event are scheduled with time values relative to the Transport time (and not the AudioContext time like the examples above). In the documentation this Transport timeline-relative positioning is called [TransportTime](http://tonejs.org/docs/#TransportTime). TransportTime has all the same tempo-relative encodings as Time, but the event is scheduled against a specific position along the Transport. 
+The `loop` we scheduled will not play until started. Tone.Loop and all classes which extend Tone.Event are scheduled with time values relative to the Transport time (and not the AudioContext time like the examples above). In the documentation this Transport timeline-relative positioning is called [TransportTime](http://tonejs.github.iodocs/#TransportTime). TransportTime has all the same tempo-relative encodings as Time, but the event is scheduled against a specific position along the Transport. 
 
 So we may want to schedule this loop to start from the beginning of the Transport (time = 0). 
 

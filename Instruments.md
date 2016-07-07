@@ -42,7 +42,7 @@ synth.triggerAttackRelease("C4", 1);
 
 ### Polyphony with Tone.PolySynth
 
-Each of the synthesizers is monophonic, meaning it can only produce a single note at a time. [Tone.PolySynth](http://tonejs.org/docs/#PolySynth) will turn any of the synthesizers into a polyphonic synthesizer by producing multiple copies of a synth and then handling the triggering of attacks and releases on those synth voices. Tone.PolySynth is not a synth by itself, but just a vessel for constructing multiple voices of any of the other synthesizer types.  
+Each of the synthesizers is monophonic, meaning it can only produce a single note at a time. [Tone.PolySynth](https://tonejs.github.io/docs/#PolySynth) will turn any of the synthesizers into a polyphonic synthesizer by producing multiple copies of a synth and then handling the triggering of attacks and releases on those synth voices. Tone.PolySynth is not a synth by itself, but just a vessel for constructing multiple voices of any of the other synthesizer types.  
 
 The name of the synth is fed to the second argument of Tone.PolySynth to turn the monophonic voice into a polyphonic synthesizer like so: 
 

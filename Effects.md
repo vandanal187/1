@@ -1,6 +1,6 @@
 Tone.js also has a bunch of stereo and mono effects. 
 
-To add an effect to your audio signal, simply connect the effect in between your source and destination. Here is an example which routes a [Tone.SimpleSynth](http://tonejs.org/docs/#SimpleSynth) through a [Tone.Distortion](http://tonejs.org/docs/#Distortion). 
+To add an effect to your audio signal, simply connect the effect in between your source and destination. Here is an example which routes a [Tone.SimpleSynth](https://tonejs.github.io/docs/#SimpleSynth) through a [Tone.Distortion](https://tonejs.github.io/docs/#Distortion). 
 
 ```javascript
 //create an effect and connect it to the master output

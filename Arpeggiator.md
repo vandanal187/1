@@ -4,13 +4,13 @@ In this example, we'll create an arpeggiator which plays the next note in a seri
 
 ### The Synthesizer
 
-Tone.js has a number of instrument, each with nearly the same interface for triggering attacks and releases. Here we'll use [Tone.SimpleSynth](http://tonejs.org/docs/#SimpleSynth), but you can easily swap the SimpleSynth for any of the other instruments without changing any other code. 
+Tone.js has a number of instrument, each with nearly the same interface for triggering attacks and releases. Here we'll use [Tone.SimpleSynth](https://tonejs.github.io/docs/#SimpleSynth), but you can easily swap the SimpleSynth for any of the other instruments without changing any other code. 
 
 ```javascript
 var synth = new Tone.SimpleSynth();
 ```
 
-We'll also connect our synth to the [master output](http://tonejs.org/docs/#Master) so that we can hear it. 
+We'll also connect our synth to the [master output](https://tonejs.github.io/docs/#Master) so that we can hear it. 
 
 ```javascript
 synth.toMaster();
@@ -18,7 +18,7 @@ synth.toMaster();
 
 ### Triggering Notes
 
-We can trigger the synth to start the attack portion of the note using `triggerAttack` -- this method takes a note and a time as arguments. To start the release portion of the note, call `triggerRelease`. Read more about using envelopes [here](https://github.com/TONEnoTONE/Tone.js/wiki/Envelope).
+We can trigger the synth to start the attack portion of the note using `triggerAttack` -- this method takes a note and a time as arguments. To start the release portion of the note, call `triggerRelease`. Read more about using envelopes [here](https://github.com/Tonejs/Tone.js/wiki/Envelope).
 
 Let's trigger the note `"C4"` then trigger the release a quarter second later (all values are in seconds):
 
@@ -43,7 +43,7 @@ var pattern = new Tone.Pattern(function(time, note){
 }, ["C4", "E4", "G4", "A4"]);
 ```
 
-[Tone.Pattern](http://tonejs.org/docs/#Pattern) will arpeggiate over the given array in a number of different ways (`"up"`, `"down"`, `"upDown"`, `"downUp"`, `"random"` and more). By default the pattern will iterate upward and then loop back to the beginning. 
+[Tone.Pattern](https://tonejs.github.io/docs/#Pattern) will arpeggiate over the given array in a number of different ways (`"up"`, `"down"`, `"upDown"`, `"downUp"`, `"random"` and more). By default the pattern will iterate upward and then loop back to the beginning. 
 
 As with all [Event classes](https://github.com/Tonejs/Tone.js/wiki/Events), `time` is passed in as the first argument. This is very important because native Javascript timing is pretty loose. Callbacks scheduled with `setInterval` for example, will happen _around_ the given time, but there is no guarantee on precision; that's not good enough for musical events. 
 

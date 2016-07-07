@@ -1,4 +1,4 @@
-[Tone.Signal](http://tonejs.org/docs/#Signal) plays an important role in Tone.js by allowing audio-rate control over many attributes. It is similar, but more flexible than the Web Audio API's native [AudioParam](http://webaudio.github.io/web-audio-api/#the-audioparam-interface) and allows sample-accurate control synchronization of a node's attributes.
+[Tone.Signal](https://tonejs.github.io/docs/#Signal) plays an important role in Tone.js by allowing audio-rate control over many attributes. It is similar, but more flexible than the Web Audio API's native [AudioParam](http://webaudio.github.io/web-audio-api/#the-audioparam-interface) and allows sample-accurate control synchronization of a node's attributes.
 
 ## Setting values
 

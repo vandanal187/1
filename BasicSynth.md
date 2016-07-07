@@ -4,7 +4,7 @@ We can make a basic synthesizer out of an oscillator and an envelope.
 
 ## Oscillator
 
-As our oscillator source, let's use an [OmniOscillator](http://tonejs.org/docs/#OmniOscillator). 
+As our oscillator source, let's use an [OmniOscillator](https://tonejs.github.io/docs/#OmniOscillator). 
 
 ```
 var osc = new Tone.OmniOscillator();
@@ -21,7 +21,7 @@ We have limited flexibility in terms of the timbre of our synthesizer, and we'll
 
 ## Envelope
 
-The trick to getting rid of the click is to apply an envelope to amplitude of the oscillator. Tone has a specific envelope type for doing this called [Tone.AmplitudeEnvelope](http://tonejs.org/docs/#AmplitudeEnvelope).
+The trick to getting rid of the click is to apply an envelope to amplitude of the oscillator. Tone has a specific envelope type for doing this called [Tone.AmplitudeEnvelope](https://tonejs.github.io/docs/#AmplitudeEnvelope).
 
 Let's connect our oscillator to the envelope and the envelope to the master output. 
 
@@ -38,14 +38,14 @@ osc.start();
 env.triggerAttack();
 ```
 
-Read more about using envelopes [here](https://github.com/TONEnoTONE/Tone.js/wiki/Envelope).
+Read more about using envelopes [here](https://github.com/Tonejs/Tone.js/wiki/Envelope).
 
 ##SimpleSynth
 
-[Tone.SimpleSynth](http://tonejs.org/docs/#SimpleSynth) combines an OmniOscillator and an AmplitudeEnvelope just like we did above, into a convenient package. 
+[Tone.SimpleSynth](https://tonejs.github.io/docs/#SimpleSynth) combines an OmniOscillator and an AmplitudeEnvelope just like we did above, into a convenient package. 
 
 ### Portamento
 
 SimpleSynth also exposes a portamento value. Portamento is the amount of time it takes to slide from one frequency to the next.
 
-Play around with all of SimpleSynth's attributes [here](http://tonejs.org/examples/simpleSynth.html).
+Play around with all of SimpleSynth's attributes [here](https://tonejs.github.io/examples/simpleSynth.html).

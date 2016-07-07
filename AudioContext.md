@@ -1,6 +1,6 @@
 The Web Audio [AudioContext](https://developer.mozilla.org/en-US/docs/Web/API/AudioContext) is the interface which represents the underlying audio-processing graph built from audio modules linked together. 
 
-In Tone.js, the AudioContext is created for you as soon as Tone.js is loaded; it is accessible as [`Tone.context`](http://tonejs.org/docs/#Tone.context) from the global Tone object or by accessing `.context` from any Tone.js class instance. 
+In Tone.js, the AudioContext is created for you as soon as Tone.js is loaded; it is accessible as [`Tone.context`](https://tonejs.github.io/docs/#Tone.context) from the global Tone object or by accessing `.context` from any Tone.js class instance. 
 
 ```javascript
 var filter = new Tone.Filter();

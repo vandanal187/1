@@ -20,21 +20,21 @@ The time it takes for the envelope to return from the sustain value back to the 
 
 Play with the parameters of an AmplitudeEnvelope to hear how each of the phases effects the timbre of the input source. 
 
-[example](http://tonejs.org/examples/envelope.html)
+[example](https://tonejs.github.io/examples/envelope.html)
 
 ### Envelope Types
 
-#### [Tone.Envelope](http://tonejs.org/docs/#Envelope)
+#### [Tone.Envelope](https://tonejs.github.io/docs/#Envelope)
 
 The basic envelope type just outputs a signal in the range of 0-1. This node has only an output and no input. 
 
 `triggerAttack` starts the attack/decay portion of the envelope ending at the sustain value. An optional velocity argument will scale the output value at that number. 
 
-#### [Tone.AmplitudeEnvelope](http://tonejs.org/docs/#AmplitudeEnvelope)
+#### [Tone.AmplitudeEnvelope](https://tonejs.github.io/docs/#AmplitudeEnvelope)
 
 An amplitude envelope is just a Tone.Envelope connect to a GainNode so that audio passed into the input of the envelope will be scaled by the Tone.Envelope.  
 
-#### [Tone.ScaledEnvelope](http://tonejs.org/docs/#ScaledEnvelope)
+#### [Tone.ScaledEnvelope](https://tonejs.github.io/docs/#ScaledEnvelope)
 
 Tone.ScaledEnvelope has a range which starts at `min` and ramps to `max`. The `min` value can be larger than the `max`, it just represents what value the envelope starts at and ramps to. 
 
