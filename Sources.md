@@ -27,12 +27,12 @@ var player = new Tone.Player("./sound.mp3", function(){
 }).toMaster();
 ```
 
-If you don't care about individual load events, bind a function to `Tone.Buffer.onload` to receive a callback when all of the buffers are fully loaded for Tone.Player, Tone.Convolver, and Tone.Sampler. 
+If you don't care about individual load events, bind a function to `Tone.Buffer.on('load', callback)` to receive a callback when all of the buffers are fully loaded for Tone.Player, Tone.Convolver, and Tone.Sampler, etc. 
 
 ```javascript
-Tone.Buffer.onload = function(){
+Tone.Buffer.on('load', function(){
 	//all buffers are loaded.	
-};
+})
 ```
 
 #### [Tone.PulseOscillator](https://tonejs.github.io/docs/#PulseOscillator)
@@ -42,6 +42,22 @@ A pulse wave is like a square wave, but instead of having a duty-cycle which is 
 #### [Tone.PWMOscillator](https://tonejs.github.io/docs/#PWMOscillator)
 
 The pulse width modulation oscillator varies the width of the PulseOscillator with another wave. It has an additional control over the `modulationWidth`. 
+
+#### [Tone.FMOscillator](https://tonejs.github.io/docs/#FMOscillator)
+
+Composed of one oscillator modulating the frequency of a second oscillator. This technique can give you many interesting harmonics.
+
+#### [Tone.AMOscillator](https://tonejs.github.io/docs/#AMOscillator)
+
+Composed of one oscillator modulating the amplitude of a second oscillator. 
+
+#### [Tone.FatOscillator](https://tonejs.github.io/docs/#FatOscillator)
+
+A fat oscillator is an abstraction around multiple, slightly detuned oscillators. 
+
+#### [Tone.Noise](https://tonejs.github.io/docs/#Noise)
+
+Noise outputs a looped random buffer with 3 different noise colors: white, pink, and brown. See [this](https://tonejs.github.io/examples/noises.html) example for what those different types of noise sound like. 
 
 #### [Tone.OmniOscillator](https://tonejs.github.io/docs/#OmniOscillator)
 
