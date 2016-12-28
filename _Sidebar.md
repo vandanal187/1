@@ -1,5 +1,6 @@
 [Installation](Installation)
 
+
 ##### Features
 * [Transport](Transport)
 * [Instruments](Instruments)
@@ -9,6 +10,7 @@
 * [Event Classes](Events)
 
 ##### Tutorials
+* [Performance and Best Practices](Performance)
 * [Making connections](Connections)
 * [Build a synth](BasicSynth)
 * [Arpeggiator](Arpeggiator)
