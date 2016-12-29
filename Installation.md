@@ -1,7 +1,6 @@
 ## Download
 
 * CDN - [full](https://tonejs.github.io/CDN/latest/Tone.js) | [min](https://tonejs.github.io/CDN/latest/Tone.min.js)
-* [bower](http://bower.io/) - `bower install tone`
 * [npm](https://www.npmjs.org/) - `npm install tone`
 
 ## Usage
