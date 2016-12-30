@@ -16,7 +16,7 @@ Tone.Transport.latencyHint = 'playback'
 
 ## Transport.start
 
-As mentioned, it's best to schedule audio events as in advance as possible. For this reason, it's good to invoke `Tone.Transport.start` a little bit in the future. `Tone.Transport.start("+0.1")` will star the Transport 100 milliseconds in the future which is not very perceptible, but can help avoid scheduling errors.
+As mentioned, it's best to schedule audio events as in advance as possible. For this reason, it's good to invoke `Tone.Transport.start` a little bit in the future. `Tone.Transport.start("+0.1")` will start the Transport 100 milliseconds in the future which is not very perceptible, but can help avoid scheduling errors.
 
 ## Syncing Visuals
 
