@@ -1,6 +1,6 @@
 ## Download
 
-* download - [full](https://tonejs.github.io/build/latest/Tone.js) | [min](https://tonejs.github.io/build/latest/Tone.min.js)
+* download - [full](https://tonejs.github.io/build/Tone.js) | [min](https://tonejs.github.io/build/Tone.min.js)
 * [npm](https://www.npmjs.org/) - `npm install tone`
 
 ## Usage
