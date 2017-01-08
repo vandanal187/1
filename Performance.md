@@ -14,9 +14,19 @@ If you're using the Transport to schedule events, the amount of time in advance 
 Tone.Transport.latencyHint = 'playback'
 ```
 
-## Transport.start
+## Scheduling in advance
 
-As mentioned, it's best to schedule audio events as in advance as possible. For this reason, it's good to invoke `Tone.Transport.start` a little bit in the future. `Tone.Transport.start("+0.1")` will star the Transport 100 milliseconds in the future which is not very perceptible, but can help avoid scheduling errors.
+As mentioned, it's best to schedule audio events as in advance as possible. For this reason, it's good to invoke `Tone.Transport.start` a little bit in the future. `Tone.Transport.start("+0.1")` will start the Transport 100 milliseconds in the future which is not very perceptible, but can help avoid scheduling errors.
+
+Scheduling further in advance works for triggering playback of sources and synths as well. For example, if you are hearing performance issues when triggering a synth from a `mousedown` callback, try scheduling the sound a little in advance. Values under 0.1 seconds won't be very noticeable, but could help reduce pops. 
+
+```javascript
+element.addEventListener('mousedown', function(){
+	//instead of scheduling the synth immediately,
+	//try scheduling 50ms in the future to avoid performance-related pops
+	synth.triggerAttack('C4', '+0.05')
+})
+```
 
 ## Syncing Visuals
 
