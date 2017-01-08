@@ -7,19 +7,11 @@
 
 ### Basic
 
-Tone.js can be used like any other script or library by dropping the into the `<head>` of your page. A global called `Tone` will be added to the `window`. 
-
-```html
-<script type="text/javascript" src="path/to/Tone.js"></script>
-```
-
-or from the Tone's CDN:
+If Tone.js is included in the page, a global variable named `Tone` will be added to the `window`.
 
 ```html
 <script type="text/javascript" src="https://tonejs.github.io/CDN/latest/Tone.js"></script>
 ```
-
-Note: it's always safer to use a specific version rather than "latest"
 
 ### Module Loaders
 
