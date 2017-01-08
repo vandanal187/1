@@ -1,6 +1,6 @@
 ## Download
 
-* CDN - [full](https://tonejs.github.io/CDN/latest/Tone.js) | [min](https://tonejs.github.io/CDN/latest/Tone.min.js)
+* CDN - [full](https://tonejs.github.io/build/latest/Tone.js) | [min](https://tonejs.github.io/build/latest/Tone.min.js)
 * [npm](https://www.npmjs.org/) - `npm install tone`
 
 ## Usage
@@ -16,7 +16,7 @@ Tone.js can be used like any other script or library by dropping the into the `<
 or from the Tone's CDN:
 
 ```html
-<script type="text/javascript" src="https://tonejs.github.io/CDN/latest/Tone.js"></script>
+<script type="text/javascript" src="https://tonejs.github.io/build/latest/Tone.js"></script>
 ```
 
 Note: it's always safer to use a specific version rather than "latest"
