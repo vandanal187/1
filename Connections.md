@@ -8,17 +8,6 @@ Signal flows from the output of the connect-er node to the input of the connect-
 
 The connection is made in the underlying API and NOT "remembered" by Tone.js or the Web Audio API in any place. So you can't later query "is A connected to B?". If they are connected, there is no way to tell. It's up to your application to remember it. 
 
-#### `disconnect` disconnects all connected nodes
-
-You can't selectively disconnect a node. If you did something like this: 
-
-```
-source.connect(filter); 
-source.connect(distortion);
-``` 
-
-Then `source.disconnect()` would disconnect both `filter` and `distortion`.
-
 #### You can connect different inputs and outputs
 
 For nodes that have multiple inputs or outputs, `connect` can accept two additional arguments: the output number of the connect-er and the input number of the connect-ee. 
