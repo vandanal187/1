@@ -4,10 +4,10 @@ In this example, we'll create an arpeggiator which plays the next note in a seri
 
 ### The Synthesizer
 
-Tone.js has a number of instruments, each with nearly the same interface for triggering attacks and releases. Here we'll use [Tone.SimpleSynth](https://tonejs.github.io/docs/#SimpleSynth), but you can easily swap the SimpleSynth for any of the other instruments without changing any other code. 
+Tone.js has a number of instruments, each with nearly the same interface for triggering attacks and releases. Here we'll use [Tone.Synth](https://tonejs.github.io/docs/#SimpleSynth), but you can easily swap the SimpleSynth for any of the other instruments without changing any other code. 
 
 ```javascript
-var synth = new Tone.SimpleSynth();
+var synth = new Tone.Synth();
 ```
 
 We'll also connect our synth to the [master output](https://tonejs.github.io/docs/#Master) so that we can hear it. 
