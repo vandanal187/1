@@ -35,8 +35,6 @@ To contribute examples, please follow the current style of the examples as close
 
 Tone.js has an extensive test suite using Mocha and Chai. I'd love help getting more of these tests to pass on Safari and Firefox.
 
-I'd also like to eventually setup a CI environment which can automatically test if commits and PRs pass all of the tests. Web Audio won't run headless with PhantomJS, but something like [Karma-Runner](http://karma-runner.github.io/0.12/index.html) on Travis CI could work well. 
-
 Along with more unit tests, I'd also like to have more tests which run in the online context and generate nice music so that we can find bugs by ear that the automated tests might not illuminate. [Audiokit](http://audiokit.io/tests/) for example has a great suite of aural tests.
 
 ### Docs
