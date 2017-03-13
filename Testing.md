@@ -26,3 +26,11 @@ Or test a group of components:
 ```bash
 gulp collectTests --event
 ```
+
+## Lint
+
+To run [jslint](http://www.jslint.com/) on all of the source code:
+
+```bash
+gulp lint
+```
