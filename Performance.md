@@ -4,14 +4,14 @@ This article provides some resources and best practices for working with Web Aud
 
 Audio failures result in pops, crackles, silence and other unwanted artifacts. Paul Adenot (the author of Firefox's Web Audio implementation) has [a great article](http://padenot.github.io/web-audio-perf/) on the CPU, memory usage and incurred latency of most of the Web Audio nodes. It can be a helpful resource for pinpointing performance bottlenecks. The most processor intensive nodes are the ConvolverNode (Tone.Convolver) and PannerNode using HRTF (Tone.Panner3D). Other than the amount and types of nodes used, Web Audio does not currently offer much in the way of performance configuration and tuning.
 
-## Transport.latencyHint
+## context.latencyHint
 
 If you're using the Transport to schedule events, the amount of time in advance events are scheduled is adjustable. Scheduling events farther in advance is easier on for the audio thread to process and may improve performance.
 
-`Tone.Transport.latencyHint` can be set to `"interactive"` (_default_, prioritizes low latency), `"playback"` (prioritizes sustained playback), `"balanced"` (balances latency and performance), and `"fastest"` (lowest latency, might glitch more often). Or set it to the number of seconds which events should be scheduled in advance. 
+`Tone.context.latencyHint` can be set to `"interactive"` (_default_, prioritizes low latency), `"playback"` (prioritizes sustained playback), `"balanced"` (balances latency and performance), and `"fastest"` (lowest latency, might glitch more often). Or set it to the number of seconds which events should be scheduled in advance. 
 
 ```javascript
-Tone.Transport.latencyHint = 'playback'
+Tone.context.latencyHint = 'playback'
 ```
 
 ## Scheduling in advance
