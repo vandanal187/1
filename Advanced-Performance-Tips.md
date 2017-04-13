@@ -10,4 +10,4 @@ These are some performance related tips I'm compiling, all learned the hard way,
 
 **Animation**
 * You can definitely draw an interactive waveform using an analyzer node, change an instrument property, and see the change in the waveform. This performs fairly well (slight crackles occasionally).
-  * What will not work is accidentally triggering the instrument's `triggerAttackRelease()` many times per second (as you hold down the space bar, for instance).
+  * What will not graph well is accidentally triggering the instrument's `triggerAttackRelease()` many times per second (as you hold down the space bar, for instance). You might not notice from the sound, but you'll see the analyzer not updating as it should be.
