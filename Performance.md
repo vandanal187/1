@@ -63,6 +63,3 @@ StartAudioContext(Tone.context, 'buttonElement').then(function(){
 	//callback is invoked when the AudioContext.state is 'running'
 })
 ```
-
-## Advanced Tips
-[More advanced performance lessons](https://github.com/Tonejs/Tone.js/wiki/Advanced-Performance-Tips)
