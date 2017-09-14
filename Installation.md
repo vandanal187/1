@@ -57,7 +57,10 @@ require(["Tone/core/Transport"], function(Transport){
 module.exports = {
 	resolve: {
 		root: __dirname,
+                // for webpack 1:
 		modulesDirectories : ["path/to/Tone.js/"],
+                // for webpack 2:
+                modules : ["path/to/Tone.js/"]
 	},
 	//...
 ```
