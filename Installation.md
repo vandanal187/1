@@ -2,6 +2,7 @@
 
 * download - [full](https://tonejs.github.io/build/Tone.js) | [min](https://tonejs.github.io/build/Tone.min.js)
 * [npm](https://www.npmjs.org/) - `npm install tone`
+* dev - `npm install tone@next`
 
 ## Usage
 
@@ -11,7 +12,7 @@ If Tone.js is included in the page, a global variable named `Tone` will be added
 
 ### Module Loaders
 
-Internally, Tone uses AMD for dependency management. But the build process adds a UMD footer to the built file which makes it compatible with both AMD and CommonJS. 
+Internally, Tone uses AMD for dependency management. But the build process adds a UMD footer to the built file which makes it compatible with both AMD and CommonJS.
 
 #### Tone.js build
 
@@ -32,9 +33,9 @@ var synth = new MonoSynth();
 
 #### Individual Files
 
-Using individual files with a module loader can bring your package size down significantly since it will only include the modules used in your code. You'll have to familiarize yourself with Tone.js' directory structure since files have to be referenced with their full path. 
+Using individual files with a module loader can bring your package size down significantly since it will only include the modules used in your code. You'll have to familiarize yourself with Tone.js' directory structure since files have to be referenced with their full path.
 
-To use the individual files, you'll need a `require` framework which supports AMD like [RequireJS](http://requirejs.org/), [webpack](https://webpack.github.io/), or [deAMDify](https://github.com/jaredhanson/deamdify) for browserify. 
+To use the individual files, you'll need a `require` framework which supports AMD like [RequireJS](http://requirejs.org/), [webpack](https://webpack.github.io/), or [deAMDify](https://github.com/jaredhanson/deamdify) for browserify.
 
 **The path to the root [Tone](https://github.com/Tonejs/Tone.js/tree/master/Tone) folder needs to be in the search path so that internal dependencies can resolve.**
 
