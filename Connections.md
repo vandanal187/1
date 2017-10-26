@@ -24,7 +24,7 @@ Use `chain` to connect a group of nodes in series.
 
 ```
 source.chain(filter, pan, volume, Tone.Master);
-// source->filter->pan->volume-Tone.Master
+// source->filter->pan->volume->Tone.Master
 ```
 
 #### `fan`
