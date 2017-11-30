@@ -76,11 +76,11 @@ A segment of time corresponding to a specific number of beats (the number of bea
 
 #### Monophonic
 
-A monophonic synthesizer plays only one note at a time. see [Monophonic](#monophonic). 
+A monophonic synthesizer plays only one note at a time. see [Polyphonic](#polyphonic). 
 
 #### Polyphonic
 
-A polyphonic synthesizer can play multiple notes at once. see [Polyphonic](#polyphonic). 
+A polyphonic synthesizer can play multiple notes at once. see [Monophonic](#monophonic). 
 
 #### Ramp
 
