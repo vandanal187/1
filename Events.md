@@ -67,7 +67,7 @@ They can be constructed with either an array of `[Time, Value]` pairs, or with a
 ```javascript
 var part = new Tone.Part(function(time, pitch){
 	synth.triggerAttackRelease(pitch, "8n", time);
-}, ["0", "C#3"], ["4n", "G3"], ["3 * 8n", "G#3"], ["2n", "C3"]]);
+}, [["0", "C#3"], ["4n", "G3"], ["3 * 8n", "G#3"], ["2n", "C3"]]);
 
 part.start("4m");
 ```
