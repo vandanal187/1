@@ -17,6 +17,7 @@ Describes time in BPM and time signature relative values.
 * `"4n"` = quarter note
 * `"8t"` = eighth note triplet
 * `"2m"` = two measures
+* `"8n."` = dotted-eighth note
 
 ### Transport Time
 
@@ -47,13 +48,6 @@ Prefix any of the above with "+" and it will be interpreted as "the current time
 * `"+1m"` = 1 measure from now
 * `"+0.5"` = half a second from now
 
-### Expressions
-
-Any of the above can also be combined into a mathematical expression which will be evaluated to compute the desired time.
-
-* `"3:0 + 2 - (1m / 7)"` = 3 measures + 2 seconds - a 7th note
-* `"+1m + 0.002"` = the current time + 1 measure and 2 milliseconds. 
-
 ### No Argument
 
 Methods which accept time, no argument (`undefined`) will be interpreted as "now" (i.e. the `audioContext.currentTime`). 
@@ -67,12 +61,6 @@ synth.triggerRelease("+4n"); //a quarter-note from now
 
 ## Quantization
 
-Using the `@` symbol, a Time can be quantized relative to the the Transport's grid. The expression on the left of the `@` is quantized against the Time to the right of the symbol.
+Using the `@` symbol, a Time can be quantized relative to the the Transport's grid. 
 
-* `"1.4 @ 4n"` = 1.5 if the BPM is 120
 * `"@1m"` = If the Transport is started, this will return the time of the next measure 
-
-The expression can be placed between parenthesis and composed with other expressions. 
-
-* `"(@1m) + 4n"` = the second beat of the next measure.
-
