@@ -13,7 +13,7 @@ var note = new Tone.Event(function(time, pitch){
 //set the note to loop every half measure
 note.set({
 	"loop" : true,
-	"loopEnd" : "2m"
+	"loopEnd" : "2n"
 });
 
 //start the note at the beginning of the Transport timeline
