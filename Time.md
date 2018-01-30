@@ -39,7 +39,7 @@ Seconds can also be described in Hz.
 A time relative to the Transport's PPQ (Pulse Per Quarter). The number before the 'i' needs to be an integer.
 
 * `"1i"` = 1 tick
-* `"192i"` = 4 quarter notes at 48 PPQ = 2 seconds.
+* `"192i"` = 1 quarter note at 192 PPQ
 
 ### Now-Relative 
 
