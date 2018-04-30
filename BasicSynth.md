@@ -40,9 +40,9 @@ env.triggerAttack();
 
 Read more about using envelopes [here](https://github.com/Tonejs/Tone.js/wiki/Envelope).
 
-## SimpleSynth
+## Tone.Synth
 
-[Tone.SimpleSynth](https://tonejs.github.io/docs/#SimpleSynth) combines an OmniOscillator and an AmplitudeEnvelope just like we did above, into a convenient package. 
+[Tone.Synth](https://tonejs.github.io/docs/#Synth) combines an OmniOscillator and an AmplitudeEnvelope just like we did above, into a convenient package. 
 
 ### Portamento
 
