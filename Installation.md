@@ -65,3 +65,12 @@ module.exports = {
 	},
 	//...
 ```
+
+##### ES6 Imports
+
+After Tone.js is added as a module resolve path, individual files can be specified like so
+
+```javascript
+import Transport from 'Tone/core/Transport';
+import Volume from 'Tone/component/Volume';
+```
