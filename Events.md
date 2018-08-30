@@ -1,4 +1,4 @@
-Tone.js has a few callback-generating classes which simplify the scheduling complexly-timed events along the Transport. These events can be set to start and stop at specific moments along the Transport as well as loop and playback at different rates. **Events will not fire unless the Transport is started.**
+Tone.js has a few callback-generating classes which simplify the scheduling of complexly-timed events along the Transport. These events can be set to start and stop at specific moments along the Transport, as well as loop and playback at different rates. **Events will not fire unless the Transport is started.**
 
 ### Tone.Event
 
