@@ -31,7 +31,7 @@ osc.connect(env);
 env.toMaster();
 ```
 
-Start the oscillator, but there won't be any sound until you trigger the attack of the envelope
+Upon starting the oscillator, no sound will be allowed thru until the envelope's Attack stage is triggered. (Note that the oscillator's signal is immediately made available to the envelope when start()'ed, but is suppressed until the Attack starts, then again after the Release stage completes.)
 
 ```
 osc.start();
