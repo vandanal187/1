@@ -117,7 +117,7 @@ seq.at(1); //returns a Tone.Sequence
 
 ### Tone.Pattern
 
-Tone.Pattern let's you easily create different kinds of arpeggios melodies. It takes a callback, an array of values and a pattern name in the constructor.
+Tone.Pattern facilitates the creation of various arpeggiated note patterns. Its constructor takes a callback, an array of note values, and a string (the name of a supported classic "arpeggiator" pattern: "up", "down", "upDown", etc.)...
 
 ```javascript
 //cycle up and then down the array of values
