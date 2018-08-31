@@ -10,20 +10,20 @@ As our oscillator source, let's use an [OmniOscillator](https://tonejs.github.io
 var osc = new Tone.OmniOscillator();
 ```
 
-If we set the frequency of the oscillator to our desired notes, and starting and stopping it, we have a crude synthesizer. 
+Once we're able to (a) set the oscillator's frequency to a desired note, and (b) specify start and stop times, we have a crude synthesizer... 
 
 ```
 osc.frequency.value = "C4";
 osc.start().stop("+8n");
 ```
 
-We have limited flexibility in terms of the timbre of our synthesizer, and we'll get a harsh click whenever a note is triggered. 
+But without further refinement, our synthesizer would have limited flexibility in terms of timbre and dynamics. Also, in its current state, it would emit an unpleasant "click" each time a note is triggered. 
 
 ## Envelope
 
-The trick to getting rid of the click is to apply an envelope to amplitude of the oscillator. Tone has a specific envelope type for doing this called [Tone.AmplitudeEnvelope](https://tonejs.github.io/docs/#AmplitudeEnvelope).
+We can get rid of the "click" (an artifact of the discontinuity resulting from instantaneously jumping from an amplitude of zero to full) by smoothing the onset of the sound.  To do this we apply an envelope to the oscillator's amplitude using [Tone.AmplitudeEnvelope](https://tonejs.github.io/docs/#AmplitudeEnvelope).
 
-Let's connect our oscillator to the envelope and the envelope to the master output. 
+Below we connect the oscillator to our newly created envelope, then route the envelope out directly to the master. 
 
 ```
 var env = new Tone.AmplitudeEnvelope();
