@@ -1,22 +1,23 @@
-# Installing Dependencies
+## Installation
 
-Tone.js uses [gulp](http://gulpjs.com/) and [requirejs](http://requirejs.org/) for building and dependency management. 
+Install all dependencies
 
-Make sure you have both of those installed (as well as [node.js](nodejs.org)): 
-
-```
-npm install --global gulp
-```
-
-From within the 'gulp' directory, install all of the dependencies:
-
-```
-cd gulp
+```bash
 npm install
 ```
 
-Once all of the dependencies are installed, simply run `gulp` from the command line. The dependency order will be resolved and all of the files will be combined into `Tone.js` and `Tone.min.js` in the 'build' folder.
+## Building
 
+The complete bundled and minified build will be in the `build` directory after running
+
+```bash
+npm run build
 ```
-gulp
-``` 
+
+## Watching
+
+For developing, it's helpful to watch for changes and have it generate a new build when any file is saved:
+
+```bash
+npm run watch
+```
