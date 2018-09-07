@@ -1,36 +1,37 @@
-Tone.js has an extensive test suite built on gulp, mocha and chai. For now, Chrome is the target testing browser, but soon this will be expanded to Firefox as well. 
+Tone.js has an extensive test suite built on karma, mocha and chai.
 
-## Running tests
+## Installing
 
-To the run the tests locally, cd into the `gulp` directory and install all of the dependencies
+To install all testing dependencies: 
 
 ```bash
-cd gulp
 npm install
 ```
 
-You can then run all of the tests by running:
+## All tests
+
+To run all tests on Chrome and Firefox using Karma Test Runner:
 
 ```bash
-gulp browser-test
+npm run test
 ```
 
-To test an individual file use the `--file` or `-f` flag:
+## Testing files
+
+To test an individual file with karma: 
 
 ```bash
-gulp collectTests -f Oscillator
+npm run test --file=Oscillator
 ```
 
-Or test a group of components:
+(replace `Oscillator` with the name of the test file you'd like to run)
+
+## Testing directories
+
+To run all tests in a directory run:
 
 ```bash
-gulp collectTests --event
+npm run test --dir=core
 ```
 
-## Lint
-
-To run [jslint](http://www.jslint.com/) on all of the source code:
-
-```bash
-gulp lint
-```
+(replace `core` with the name of the directory you'd like to run)
