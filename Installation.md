@@ -74,3 +74,25 @@ After Tone.js is added as a module resolve path, individual files can be specifi
 import Transport from 'Tone/core/Transport';
 import Volume from 'Tone/component/Volume';
 ```
+
+##### Newbie MacOS Installation Commands
+If you have XCode installed on your Mac, you should be able to get the examples running with the following steps:
+Download the .zip file from github:
+https://github.com/Tonejs/Tone.js/archive/dev.zip
+
+The file should unzip automatically, so then in a Terminal window go into the directory:
+$ cd Tone.js-dev
+
+and run the commands:
+$ npm install 
+...
+$ npm run build
+
+Then you need to run a webserver in the directory to serve the files
+$ python -m SimpleHTTPServer 8000
+(note, you have to be in the Tone.js-dev directory when you run the python command)
+
+Then, from a browser visit the URL:
+localhost:8000/examples
+
+and you should see the examples.
