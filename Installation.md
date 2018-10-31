@@ -81,8 +81,9 @@ Download the .zip file from github:
 https://github.com/Tonejs/Tone.js/archive/dev.zip
 
 The file should unzip automatically, so then in a Terminal window go into the directory:
+```javascript
 $ cd Tone.js-dev
-
+```
 and run the commands:
 $ npm install 
 ...
