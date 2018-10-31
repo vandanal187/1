@@ -75,7 +75,7 @@ import Transport from 'Tone/core/Transport';
 import Volume from 'Tone/component/Volume';
 ```
 
-##### Newbie MacOS QuickStart to Get Examples Running
+## Newbie MacOS QuickStart to Get Examples Running
 If you have XCode installed on your Mac, you should be able to get the examples running with the following steps:
 Download the .zip file from github:
 https://github.com/Tonejs/Tone.js/archive/dev.zip
