@@ -40,7 +40,7 @@ Next let's pick a set of notes to arpeggiate over, like a C pentatonic scale. We
 ```javascript
 var pattern = new Tone.Pattern(function(time, note){
 	synth.triggerAttackRelease(note, 0.25);
-}, ["C4", "E4", "G4", "A4"]);
+}, ["C4", "D4", "E4", "G4", "A4"]);
 ```
 
 [Tone.Pattern](https://tonejs.github.io/docs/#Pattern) will arpeggiate over the given array in a number of different ways (`"up"`, `"down"`, `"upDown"`, `"downUp"`, `"random"` and more). By default the pattern will iterate upward and then loop back to the beginning. 
