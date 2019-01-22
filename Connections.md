@@ -1,4 +1,4 @@
-`connect` is how we move audio data from one node to the next. It's analogous to running a cable from the output of one node to the input of another. You will see the method used all over Tone.js and the Web Audio API, so it's important to know what it does and how to use it. 
+`connect` is used to specify how audio data should flow from one node to the next. It's analogous to "connecting a cable" from the output of one thing to the input of another. You will see the method used all over Tone.js and the Web Audio API, so it's important to know what it does and how to use it. 
 
 #### Connections are directional
 
