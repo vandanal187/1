@@ -6,7 +6,7 @@ Audio failures result in pops, crackles, silence and other unwanted artifacts. P
 
 ## context.latencyHint
 
-If you're using the Transport to schedule events, the amount of time in advance events are scheduled is adjustable. Scheduling events farther in advance is easier on for the audio thread to process and may improve performance.
+If you're using the Transport to schedule events, the amount of time in advance events are scheduled is adjustable. Scheduling events farther in advance is easier for the audio thread to process and may improve performance.
 
 `Tone.context.latencyHint` can be set to `"interactive"` (_default_, prioritizes low latency), `"playback"` (prioritizes sustained playback), `"balanced"` (balances latency and performance), and `"fastest"` (lowest latency, might glitch more often). Or set it to the number of seconds which events should be scheduled in advance. 
 
