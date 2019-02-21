@@ -28,8 +28,8 @@ Tone.Signal includes all of the same scheduling methods which the `AudioParam` d
 
 Additionally, Tone provides methods for ramping and scheduling values at the current time. These simplify the above methods by canceling all values after the current time and setting an automation point at the current value. 
 
-* `linearRampToValue` - set a value and a ramp time and the signal will begin linearly ramping towards that value. 
-* `exponentialRampToValue` - same as above but exponential ramp. 
+* `linearRampTo` - set a value and a ramp time and the signal will begin linearly ramping towards that value. 
+* `exponentialRampTo` - same as above but exponential ramp. 
 * `rampTo` - same interface as the above methods, but will automatically decide to use linear or exponential based on the units of the signal. 
 
 ## Implementation
