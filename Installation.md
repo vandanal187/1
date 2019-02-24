@@ -1,6 +1,6 @@
 ## Download
 
-* download - [full](https://tonejs.github.io/build/Tone.js) | [min](https://tonejs.github.io/build/Tone.min.js)
+* [download](https://tonejs.github.io/build/Tone.js)
 * [npm](https://www.npmjs.org/) - `npm install tone`
 * dev - `npm install tone@next`
 
