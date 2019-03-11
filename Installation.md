@@ -3,7 +3,7 @@
 * [download](https://tonejs.github.io/build/Tone.js)
 * [npm](https://www.npmjs.org/) - `npm install tone`
 * dev - `npm install tone@next`
-
+* CDN - https://cdnjs.cloudflare.com/ajax/libs/tone/13.0.1/Tone.min.js
 ## Usage
 
 ### Basic
