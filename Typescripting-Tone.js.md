@@ -73,7 +73,7 @@ private _volume: Volume = new Volume({
 
 One of the tests in [BasicTests](https://github.com/Tonejs/Tone.js/blob/typescript/test/helper/Basic.js) tries to ensure and enforce this. 
 
-## 4) Naming and Namespace
+## 5) Naming and Namespace
 
 Previously all classes were added to the `Tone` object which was used as a namespace. In this typescript conversion, all of the modules have their own name and the bundling under one namespace will be handled in a later step to ensure backwards compatibility. 
 
@@ -96,7 +96,7 @@ Also make sure that the class has a "name" property like in the example above.
 
 The new naming scheme means that some module names need to change. For example `Tone.Buffer` has been renamed to `ToneAudioBuffer` and `Tone.AudioNode` has been changed to `ToneAudioNode`. This is done to avoid any ambiguity with javascript native classes.
 
-## 5) Linting
+## 6) Linting
 
 The typescript update is using [tslint](https://palantir.github.io/tslint/) for linting. You can see the config in `tslint.json`. 
 
@@ -104,6 +104,10 @@ The typescript update is using [tslint](https://palantir.github.io/tslint/) for 
 
 This is still in early development, so not all of the tooling and building are completed yet. If you'd like to contribute to this as well, that's also helpful! The goal is to keep it as backwards compatibility in terms of how the library is imported and used. 
 
-Goal: 
+## Build Output 
 
 It should build es5 compatible modules as well as a single minified file which exports a single object that all the modules are nested within. 
+
+## Docs
+
+Separately, the documentation pipeline will also need to be worked on. i will start a separate repo for that. 
