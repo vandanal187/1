@@ -4,7 +4,7 @@ This is a major undertaking and refactor. These are some notes to get everyone o
 
 # Up and Running
 
-Hopefully it's as easy as `npm install` to add all of the dependencies and `npm run watch` to 
+Hopefully it's as easy as `npm install` to add all of the dependencies and `npm run watch` to start typescript watch
 
 # Guidelines
 
