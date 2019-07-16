@@ -6,6 +6,8 @@ This is a major undertaking and refactor. These are some notes to get everyone o
 
 Hopefully it's as easy as `npm install` to add all of the dependencies and `npm run watch` to start typescript watch
 
+To help with the typescript conversion, i usually use [lebab](https://github.com/lebab/lebab) to speed up getting started. You'll have to edit the file a little before lebab can parse it. This usually includes changing `Tone.ClassName = function` to `const ClassName = function` and all references of `Tone.ClassName` to `ClassName`. I find it is also not able to parse the `defaults` static member and `Tone.extend(ClassName)` so i usually comment those out as well. 
+
 # Guidelines
 
 ## 1) Branch
