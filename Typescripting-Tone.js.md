@@ -2,6 +2,8 @@ The goal is to convert all of Tone.js' modules to Typescript. These are some poi
 
 This is a major undertaking and refactor. These are some notes to get everyone on the same page. 
 
+[Here's a short video of me converting Tone.Reverb](https://www.youtube.com/watch?v=5wo98hOKR5k)
+
 # Up and Running
 
 Hopefully it's as easy as `npm install` to add all of the dependencies and `npm run watch` to start typescript watch
