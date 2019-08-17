@@ -14,6 +14,12 @@ If you're using the Transport to schedule events, the amount of time in advance 
 Tone.context.latencyHint = 'playback'
 ```
 
+## context.lookAhead
+
+By default a short lookAhead is used for scheduling everything in Tone.js. The native Web Audio's `context.currentTime` is summed with the value stored in `context.lookAhead` which defaults to `0.1 seconds`. This performance benefit is obviously at the expense of latency, For lower latency you can either set the lookAhead to a smaller value or 0, or use `Tone.immediate()` or `Tone.context.currentTime` which are the same value. 
+
+Setting the `latencyHint` as mentioned above will also modify the `lookAhead` value.
+
 ## Scheduling in advance
 
 As mentioned, it's best to schedule audio events as in advance as possible. For this reason, it's good to invoke `Tone.Transport.start` a little bit in the future. `Tone.Transport.start("+0.1")` will start the Transport 100 milliseconds in the future which is not very perceptible, but can help avoid scheduling errors.
