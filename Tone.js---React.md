@@ -1,0 +1,1 @@
+This is a place to add any gotcha's and tips for people combining Tone.js with React
