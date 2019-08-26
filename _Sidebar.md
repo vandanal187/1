@@ -18,6 +18,7 @@
 * [Understanding Envelopes](Envelope)
 * [Time](Time)
 * [TransportTime](TransportTime)
+* [Using Tone.js With React](Using-Tone.js-with-React)
 
 ##### Dev
 * [Contributing](Contributing)
