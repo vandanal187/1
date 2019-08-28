@@ -1,6 +1,6 @@
-This is a place to add any gotcha's and tips for people combining Tone.js with React
+This is a place to add any gotcha's and tips for people combining Tone.js with React or Vue
 
-## Basic example in vanilla JS and React
+## Basic example in vanilla JS, React, and Vue
 
 ### Vanilla Javascript ([demo](https://codesandbox.io/s/tone-sampler-example-4pm72))
 ```js
@@ -97,4 +97,39 @@ export const App = () => {
 };
 
 ReactDOM.render(<App />, document.getElementById("app"));
+```
+
+## The Same Example Using Vue Components ([Demo](https://codesandbox.io/s/tonejs-vue-example-wo3qr))
+```js
+import { Sampler } from "tone";
+import A1 from "./A1.mp3";
+import Vue from "vue";
+
+new Vue({
+  el: "#app",
+  template: `
+  <div id="app">
+    <button :disabled="!isLoaded" @click="handleClick">
+      start
+    </button>
+  </div>`,
+  data: {
+    isLoaded: false
+  },
+  created() {
+    this.sampler = new Sampler(
+      { A1 },
+      {
+        onload: () => {
+          this.isLoaded = true;
+        }
+      }
+    ).toMaster();
+  },
+  methods: {
+    handleClick() {
+      this.sampler.triggerAttack("A1");
+    }
+  }
+});
 ```
