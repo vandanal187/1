@@ -104,6 +104,29 @@ The new naming scheme means that some module names need to change. For example `
 
 The typescript update is using [tslint](https://palantir.github.io/tslint/) for linting. You can see the config in `tslint.json`. 
 
+## 7) Constructor
+
+A typical constructor looks something like this. It takes either a list of parameters, or an options object which includes all of the parameters described by `getDefaults()`
+
+```typescript
+
+/**
+ * @param frequency The starting frequency of the oscillator.
+ * @param type The type of the carrier oscillator.
+ * @param modulationType The type of the modulator oscillator.
+ */
+constructor(frequency?: Frequency, type?: ToneOscillatorType, modulationType?: ToneOscillatorType);
+constructor(options?: Partial<AMConstructorOptions>);
+constructor() {
+
+	super(optionsFromArguments(AMOscillator.getDefaults(), arguments, ["frequency", "type", "modulationType"]));
+	const options = optionsFromArguments(AMOscillator.getDefaults(), arguments, ["frequency", "type", "modulationType"]);
+	...
+```
+
+A couple of things to note about this: The enumerated arguments are the first overloaded constructor, the options object is the second one, and the overloaded constructor with no arguments is the last one. The `optionsFromArguments` function needs to be used twice here since `options` can't be defined before `super()` is called. Make sure to also add parameter documentation to at least the first constructor description.
+
+
 # Tooling and Building
 
 This is still in early development, so not all of the tooling and building are completed yet. If you'd like to contribute to this as well, that's also helpful! The goal is to keep it as backwards compatibility in terms of how the library is imported and used. 
