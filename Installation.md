@@ -3,7 +3,7 @@
 * [download](https://tonejs.github.io/build/Tone.js)
 * [npm](https://www.npmjs.org/) - `npm install tone`
 * dev - `npm install tone@next`
-* CDN - https://cdnjs.cloudflare.com/ajax/libs/tone/13.0.1/Tone.min.js
+
 ## Usage
 
 ### Basic
@@ -12,7 +12,7 @@ If Tone.js is included in the page, a global variable named `Tone` will be added
 
 ### Module Loaders
 
-Internally, Tone uses AMD for dependency management. But the build process adds a UMD footer to the built file which makes it compatible with both AMD and CommonJS.
+Internally, Tone uses `import`/`export` for dependency management. 
 
 #### Tone.js build
 
