@@ -35,7 +35,7 @@ synth.triggerAttackRelease("C4", 0.25, time);
 
 ### The Arpeggio
 
-Next let's pick a set of notes to arpeggiate over, like a C pentatonic scale. We'll set an interval and get the next note from the array on every loop. If the last argument of `triggerAttackRelease` is ommited, it defaults to the current time.
+Next let's pick a set of notes to arpeggiate over, like a C pentatonic scale. We'll set an interval and get the next note from the array on every loop. If the last argument of `triggerAttackRelease` is omitted, it defaults to the current time.
 
 ```javascript
 var pattern = new Tone.Pattern(function(time, note){
