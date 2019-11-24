@@ -15,9 +15,9 @@ oscillator.frequency.value = 100; //sets the value immediately
 
 ## Scheduling values
 
-A very important feature of Tone.Signal is that it sample-accurate. Scheduled changes will occur precisely when they are supposed to. 
+A very important feature of Tone.Signal is that it is sample-accurate. Scheduled changes will occur precisely when they are supposed to. 
 
-Tone.Signal includes all of the same scheduling methods which the `AudioParam` does such as: 
+Tone.Signal includes all of the same scheduling methods as the `AudioParam`, such as: 
 
 * `setValueAtTime` - to schedule a value change at a precise time.
 * `linearRampToValueAtTime` - to ramp to a value starting from the previously scheduled value. 
