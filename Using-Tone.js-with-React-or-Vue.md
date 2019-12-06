@@ -1,4 +1,4 @@
-This is a place to add any gotcha's and tips for people combining Tone.js with React or Vue
+This is a place to add any gotcha's and tips for people combining Tone.js with React or Vue. 
 
 ## Basic example in vanilla JS, React, and Vue
 
@@ -133,3 +133,7 @@ new Vue({
   }
 });
 ```
+
+## References
+
+* [TypeScript - React+TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet)
