@@ -136,4 +136,4 @@ new Vue({
 
 ## References
 
-* [TypeScript - React+TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet)
+* [React + TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet)
