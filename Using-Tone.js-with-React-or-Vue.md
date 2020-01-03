@@ -65,25 +65,27 @@ export default class App extends React.Component {
 ReactDOM.render(<App />, document.getElementById("app"));
 ```
 
-## The React component using Hooks ([Demo](https://codesandbox.io/s/tone-sampler-example-3j9tm))
+## The React component using Hooks ([Demo](https://codesandbox.io/s/tone-sampler-example-sjohx))
 ```js
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { Sampler } from "tone";
 import A1 from "../A1.mp3";
 
 export const App = () => {
   const [isLoaded, setLoaded] = useState(false);
-  const sampler = useRef(
-    new Sampler(
+  const sampler = useRef(null);
+
+  useEffect(() => {
+    sampler.current = new Sampler(
       { A1 },
       {
         onload: () => {
           setLoaded(true);
         }
       }
-    ).toMaster()
-  );
+    ).toMaster();
+  }, []);
 
   const handleClick = () => sampler.current.triggerAttack("A1");
 
