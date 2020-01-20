@@ -12,7 +12,7 @@ If Tone.js is included in the page, a global variable named `Tone` will be added
 
 ### Module Loaders
 
-Internally, Tone uses `import`/`export` for dependency management. 
+Internally, Tone uses `import`/`export` for dependency management. This allows the library to be used with `<script type="module">`. 
 
 #### Tone.js build
 
