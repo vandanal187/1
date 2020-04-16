@@ -30,3 +30,8 @@ Tone.context.state === "running"
 ```
 
 The way that autoplay is handled can be pretty inconsistent and what counts as a user gesture might be different for different platforms or situations. The most reliable solution is to invoke `Tone.start()` after a button click.
+
+## Background
+
+The purpose of the Autoplay policy is to stop pages from making a sound as soon as it loads. The intention is to give users greater playback control and a good user experience where pages aren't making unwanted sounds at them before they give permission. This has been the case for mobile browsers for quite a while. And in the past few years, desktop browsers have adopted stricter autoplay as well. 
+
