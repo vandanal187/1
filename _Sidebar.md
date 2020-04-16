@@ -10,6 +10,7 @@
 * [Event Classes](Events)
 
 ##### Tutorials
+* [Autoplay](Autoplay)
 * [Performance and Best Practices](Performance)
 * [Making connections](Connections)
 * [Build a synth](BasicSynth)
