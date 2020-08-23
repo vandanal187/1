@@ -8,10 +8,10 @@ Audio failures result in pops, crackles, silence and other unwanted artifacts. P
 
 If you're using the Transport to schedule events, the amount of time in advance events are scheduled is adjustable. Scheduling events farther in advance is easier for the audio thread to process and may improve performance.
 
-`Tone.context.latencyHint` can be set to `"interactive"` (_default_, prioritizes low latency), `"playback"` (prioritizes sustained playback), `"balanced"` (balances latency and performance), and `"fastest"` (lowest latency, might glitch more often). Or set it to the number of seconds which events should be scheduled in advance. 
+The `latencyHint` of Tone.js's AudioContext can be adjusted by instantiating a new context to replace Tone.js's default context. `latencyHint` can have a value of `"interactive"` (_default_, prioritizes low latency), `"playback"` (prioritizes sustained playback), or `"balanced"` (balances latency and performance). Or set it to the number of seconds which events should be scheduled in advance. 
 
 ```javascript
-Tone.context.latencyHint = 'playback'
+Tone.setContext(new Tone.Context({ latencyHint : "playback" }))
 ```
 
 ## context.lookAhead
