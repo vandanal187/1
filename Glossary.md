@@ -24,7 +24,7 @@ A buffer is an array of audio data. Typically values are in the range of +1 to -
 
 #### Bus
 
-A bus is an audio pathway that allows you to move a sound from one part of the mixer to another. [[link](http://audiogeekzine.com/2008/09/understanding-sends-auxes-and-buses/)]. 
+A bus is an audio pathway that allows you to move a sound from one part of the mixer to another. [[link](https://web.archive.org/web/20150423054231/http://audiogeekzine.com/2008/09/understanding-sends-auxes-and-buses/)]. 
 
 #### Callback
 
