@@ -16,7 +16,7 @@ Tone.Oscillator also includes modifiers on the default oscillator types. Set the
 Tone.Player plays an audio file. 
 
 ```javascript
-var player = new Tone.Player("./sound.mp3").toMaster();
+var player = new Tone.Player("./sound.mp3").toDestination();
 ```
 
 If you need to keep track of individual buffer loading, use the second callback of the constructor. 
@@ -24,7 +24,7 @@ If you need to keep track of individual buffer loading, use the second callback 
 ```javascript
 var player = new Tone.Player("./sound.mp3", function(){
 	//the player is now ready	
-}).toMaster();
+}).toDestination();
 ```
 
 If you don't care about individual load events, bind a function to `Tone.Buffer.on('load', callback)` to receive a callback when all of the buffers are fully loaded for Tone.Player, Tone.Convolver, and Tone.Sampler, etc. 
