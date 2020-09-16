@@ -1,9 +1,5 @@
 # Tone.js Wiki
 
-## Installation
-
-There are a few ways to install and use Tone.js using either `npm` or `bower` or the Tone.js CDN. Tone can also be used with or without requirejs. For full instructions, take a look at the [installation guide](Installation)
-
 ## Working with Tone.js
 
 To get started sequencing and synthesizing notes, take a look at a basic [arpeggiator walkthrough](Arpeggiator).
