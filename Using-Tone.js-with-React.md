@@ -1,0 +1,1 @@
+Note to anyone considering working with audio in React Native, including using Tone.js.  React Native uses native audio libraries that can cause substantial and unforeseen problems, like random whole-app crashes that are very difficult to debug and may be due to un-changeable native code.  Proceed with caution.
