@@ -31,11 +31,3 @@ Additionally, Tone provides methods for ramping and scheduling values at the cur
 * `linearRampTo` - set a value and a ramp time and the signal will begin linearly ramping towards that value. 
 * `exponentialRampTo` - same as above but exponential ramp. 
 * `rampTo` - same interface as the above methods, but will automatically decide to use linear or exponential based on the units of the signal. 
-
-## Implementation
-
-Tone.Signal is implemented in a very simple way. Each instance is just a GainNode connected to a constant signal generator. The generator always outputs 1, and the GainNode sets the output value by adjusting its gain. Every Signal is just a single GainNode and the constant generator is shared among all instances making it very efficient. It has the benefit of easily inheriting all of `AudioParam`'s scheduling methods. 
-
-## Operators
-
-There are dozens of operators on signals to perform math, logic and routing.  
