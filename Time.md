@@ -64,3 +64,11 @@ synth.triggerRelease("+4n"); //a quarter-note from now
 Using the `@` symbol, a Time can be quantized relative to the the Transport's grid. 
 
 * `"@1m"` = If the Transport is started, this will return the time of the next measure 
+
+## Conversion
+
+To convert between seconds and BPM relative values, use [Tone.Time](https://tonejs.github.io/docs/latest/fn/Time.html)
+
+```javascript
+Tone.Time("4n").toSeconds();
+```
