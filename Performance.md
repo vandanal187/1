@@ -58,14 +58,3 @@ var loop = new Tone.Loop(function(time){
 ## Loading and Decoding AudioBuffers
 
 On memory constrained devices like mobile phones, loading many and/or large audio files can cause the browser to crash during the buffer decoding.
-
-## StartAudioContext
-
-Some browsers require (and it usually makes for a good user experience) to allow the user to initiate starting the audio. [StartAudioContext](https://github.com/tambien/StartAudioContext) plays a silent sound on a user action to ensures that the AudioContext is started. 
-
-To use it with Tone.js, just pass in the Tone.context as the first argument
-```javascript
-StartAudioContext(Tone.context, 'buttonElement').then(function(){
-	//callback is invoked when the AudioContext.state is 'running'
-})
-```
